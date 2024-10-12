@@ -1,18 +1,41 @@
 import {
   Document,
+  Font,
   Image,
   Page,
   PDFViewer,
   Text,
   View,
 } from "@react-pdf/renderer";
+import { referenceValues } from "@/constants/reference-values";
 
 // Create Document Component
 export default function Report() {
+  Font.register({
+    family: "Open Sans",
+    fonts: [
+      {
+        src: "https://cdn.jsdelivr.net/npm/open-sans-all@0.1.3/fonts/open-sans-regular.ttf",
+      },
+      {
+        src: "https://cdn.jsdelivr.net/npm/open-sans-all@0.1.3/fonts/open-sans-700.ttf",
+        fontWeight: 700,
+      },
+      {
+        src: "https://cdn.jsdelivr.net/npm/open-sans-all@0.1.3/fonts/open-sans-600.ttf",
+        fontWeight: 600,
+      },
+    ],
+  });
   return (
     <PDFViewer width="100%" height="800px">
       <Document>
-        <Page size="A4">
+        <Page
+          size="A4"
+          style={{
+            fontFamily: "Open Sans",
+          }}
+        >
           <Image
             src="/header.png"
             style={{
@@ -32,7 +55,6 @@ export default function Report() {
             style={{
               textAlign: "center",
               textDecoration: "underline",
-              fontWeight: "bold",
             }}
           >
             <Text
@@ -60,7 +82,9 @@ export default function Report() {
                   padding: 2,
                 }}
               >
-                <Text style={{ fontSize: 10 }}>Patient Name :- MR./MRS.</Text>
+                <Text style={{ fontSize: 10, fontWeight: 600 }}>
+                  Patient Name :- MR./MRS.
+                </Text>
               </View>
               <View style={{ width: "50%", padding: 2 }}>
                 <Text
@@ -120,7 +144,7 @@ export default function Report() {
               style={{
                 width: "100%",
                 borderTop: "1px solid black",
-                marginTop: "5px",
+                marginTop: "2px",
               }}
             >
               <View
@@ -133,34 +157,129 @@ export default function Report() {
                 <View
                   style={{
                     width: "35%",
-                    padding: 5,
+                    padding: 3,
                   }}
                 >
-                  <Text style={{ fontSize: 10 }}>INVESTIGATION</Text>
-                </View>
-                <View
-                  style={{
-                    width: "15%",
-                    padding: 5,
-                    textAlign: "center",
-                  }}
-                >
-                  <Text style={{ fontSize: 10, fontWeight: "bold" }}>
-                    RESULT
+                  <Text style={{ fontSize: 10, fontWeight: 700 }}>
+                    INVESTIGATION
                   </Text>
                 </View>
                 <View
                   style={{
-                    width: "35%",
-                    padding: 5,
+                    width: "20%",
+                    padding: 3,
                     textAlign: "center",
+                    marginRight: 10,
                   }}
                 >
-                  <Text style={{ fontSize: 10 }}>REFERENCE RANGE</Text>
+                  <Text style={{ fontSize: 10, fontWeight: 700 }}>RESULT</Text>
                 </View>
-                <View style={{ width: "10%", padding: 5 }}>
-                  <Text style={{ fontSize: 10 }}>UNIT</Text>
+                <View
+                  style={{
+                    width: "35%",
+                    padding: 3,
+                    textAlign: "left",
+                  }}
+                >
+                  <Text style={{ fontSize: 10, fontWeight: 700 }}>
+                    REFERENCE RANGE
+                  </Text>
                 </View>
+                <View style={{ width: "10%", padding: 3 }}>
+                  <Text style={{ fontSize: 10, fontWeight: 700 }}>UNIT</Text>
+                </View>
+              </View>
+            </View>
+          </View>
+
+          {/* Test results will be added here */}
+          <View
+            style={{
+              width: "97%",
+              marginTop: "2px",
+              alignSelf: "center",
+            }}
+          >
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <View
+                style={{
+                  width: "35%",
+                  padding: 3,
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: 10,
+                    fontWeight: 700,
+                    textDecoration: "underline",
+                  }}
+                >
+                  Calcium
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={{
+              width: "97%",
+              marginTop: "2px",
+              alignSelf: "center",
+            }}
+          >
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <View
+                style={{
+                  width: "35%",
+                  padding: 3,
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: 10,
+                  }}
+                >
+                  Calcium
+                </Text>
+              </View>
+              <View
+                style={{
+                  width: "20%",
+                  padding: 3,
+                  textAlign: "center",
+                  marginRight: 10,
+                }}
+              >
+                <Text style={{ fontSize: 10 }} render={() => "8.7"}></Text>
+              </View>
+              <View
+                style={{
+                  width: "35%",
+                  padding: 3,
+                  textAlign: "left",
+                }}
+              >
+                <Text
+                  style={{ fontSize: 10 }}
+                  render={() => referenceValues.calcium.value}
+                ></Text>
+              </View>
+              <View style={{ width: "10%", padding: 3 }}>
+                <Text
+                  style={{ fontSize: 10 }}
+                  render={() => referenceValues.calcium.unit}
+                ></Text>
               </View>
             </View>
           </View>
