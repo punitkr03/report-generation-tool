@@ -7,10 +7,10 @@ import Report from "./components/Report";
 function App() {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Metadata />
-      <TestSelection /> */}
-      <Report />
+      <TestSelection />
+      {/* <Report /> */}
       {/* <PDFDownloadLink document={<Report />} fileName="report.pdf">
         Lol
       </PDFDownloadLink> */}

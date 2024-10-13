@@ -388,7 +388,7 @@ export const referenceValues = {
       unit: "IU/L",
     },
   },
-  //Protien
+  //Protein
   total_protein: {
     value: "6.4-8.2",
     unit: "g/dL",
@@ -464,7 +464,7 @@ export const referenceValues = {
       unit: "mg/dL",
     },
   },
-  //Choletrol
+  //Cholesterol
   total_cholesterol: {
     desirable: {
       value: "Up to 200",

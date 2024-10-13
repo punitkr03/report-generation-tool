@@ -27,6 +27,7 @@ export default function Report() {
       },
     ],
   });
+
   return (
     <PDFViewer width="100%" height="800px">
       <Document>
