@@ -10,7 +10,11 @@ import {
 import { Label } from "@/components/ui/label";
 import { testLabels } from "@/constants/test-labels";
 import { useState } from "react";
+import Metadata from "./Metadata";
+import Navbar from "./Navbar";
+import { Calendar } from "./ui/calendar";
 import { Input } from "./ui/input";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import {
   Select,
   SelectContent,
@@ -19,13 +23,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { Calendar } from "./ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import Navbar from "./Navbar";
-import Metadata from "./Metadata";
 
 export default function TestSelection() {
   const [selectedTestTypes, setSelectedTestTypes] = useState<string[]>([]);
+  const [reportData, setReportData] = useState({});
+  console.log("selectedTestTypes", selectedTestTypes);
+  console.log(reportData);
   return (
     <>
       <Navbar />
@@ -80,6 +83,12 @@ export default function TestSelection() {
                 type="number"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    aso_titre: e.target.value,
+                  });
+                }}
               />
             </div>
           </div>
@@ -1476,7 +1485,19 @@ export default function TestSelection() {
       {selectedTestTypes.length > 0 && (
         <div className="flex w-full justify-center">
           <Button className="bg-slate-700 text-white max-w-fit my-4">
-            <a target="_blank" href="/#/report">
+            <a
+              target="_blank"
+              href="/#/report"
+              onClick={() => {
+                localStorage.setItem(
+                  "data",
+                  JSON.stringify({
+                    selectedTestTypes: selectedTestTypes,
+                    reportData: reportData,
+                  })
+                );
+              }}
+            >
               Generate Report
             </a>
           </Button>

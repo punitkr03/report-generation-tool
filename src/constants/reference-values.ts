@@ -524,16 +524,3 @@ export const referenceValues = {
     unit: "sec",
   },
 };
-
-//Malaria -- FOUND / NOT FOUND
-//Malaria Antigen -- POSITIVE / NEGATIVE
-//Serology
-
-//Mantoux Test
-//Keep the tu as it is and add the date options on top two params. Positive / Negative option needed.
-//URine CS
-//Urine RE
-//Semen
-//Blood Group
-//Stool
-//HCG

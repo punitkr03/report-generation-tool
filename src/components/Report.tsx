@@ -1,3 +1,4 @@
+import { referenceValues } from "@/constants/reference-values";
 import {
   Document,
   Font,
@@ -7,10 +8,13 @@ import {
   Text,
   View,
 } from "@react-pdf/renderer";
-import { referenceValues } from "@/constants/reference-values";
 
-// Create Document Component
-export default function Report({ data }: { data: string }) {
+export default function Report() {
+  const data = JSON.parse(localStorage.getItem("data") as string);
+  console.log(data);
+  const selectedTests = data.selectedTestTypes;
+  const reportData = data.reportData;
+
   Font.register({
     family: "Open Sans",
     fonts: [
@@ -194,96 +198,106 @@ export default function Report({ data }: { data: string }) {
           </View>
 
           {/* Test results will be added here */}
-          <View
-            style={{
-              width: "97%",
-              marginTop: "2px",
-              alignSelf: "center",
-            }}
-          >
+          {/* ASO Titre */}
+          {selectedTests && selectedTests.includes("aso_titre") && (
             <View
               style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
+                marginHorizontal: 10,
+                borderBottom: "1px solid black",
               }}
             >
               <View
                 style={{
-                  width: "35%",
-                  padding: 3,
+                  width: "97%",
+                  marginTop: "2px",
                 }}
               >
-                <Text
+                <View
                   style={{
-                    fontSize: 10,
-                    fontWeight: 700,
-                    textDecoration: "underline",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
                   }}
                 >
-                  Calcium
-                </Text>
+                  <View
+                    style={{
+                      width: "35%",
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 12,
+                        fontWeight: 600,
+                        textDecoration: "underline",
+                      }}
+                    >
+                      Anti Streptolysin O (ASO)
+                    </Text>
+                  </View>
+                </View>
               </View>
-            </View>
-          </View>
-          <View
-            style={{
-              width: "97%",
-              marginTop: "2px",
-              alignSelf: "center",
-            }}
-          >
-            <View
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-              }}
-            >
               <View
                 style={{
-                  width: "35%",
-                  padding: 3,
+                  width: "97%",
+                  marginTop: "2px",
                 }}
               >
-                <Text
+                <View
                   style={{
-                    fontSize: 10,
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
                   }}
                 >
-                  Calcium
-                </Text>
-              </View>
-              <View
-                style={{
-                  width: "20%",
-                  padding: 3,
-                  textAlign: "center",
-                  marginRight: 10,
-                }}
-              >
-                <Text style={{ fontSize: 10 }} render={() => data}></Text>
-              </View>
-              <View
-                style={{
-                  width: "35%",
-                  padding: 3,
-                  textAlign: "left",
-                }}
-              >
-                <Text
-                  style={{ fontSize: 10 }}
-                  render={() => referenceValues.calcium.value}
-                ></Text>
-              </View>
-              <View style={{ width: "10%", padding: 3 }}>
-                <Text
-                  style={{ fontSize: 10 }}
-                  render={() => referenceValues.calcium.unit}
-                ></Text>
+                  <View
+                    style={{
+                      width: "35%",
+                      paddingTop: 3,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 10,
+                      }}
+                    >
+                      ASO titre
+                    </Text>
+                  </View>
+                  <View
+                    style={{
+                      width: "20%",
+                      padding: 3,
+                      textAlign: "center",
+                      marginRight: 10,
+                    }}
+                  >
+                    <Text
+                      style={{ fontSize: 10 }}
+                      render={() => reportData.aso_titre}
+                    ></Text>
+                  </View>
+                  <View
+                    style={{
+                      width: "35%",
+                      padding: 3,
+                      textAlign: "left",
+                    }}
+                  >
+                    <Text
+                      style={{ fontSize: 10 }}
+                      render={() => referenceValues.aso_titre.value}
+                    ></Text>
+                  </View>
+                  <View style={{ width: "10%", padding: 3 }}>
+                    <Text
+                      style={{ fontSize: 10 }}
+                      render={() => referenceValues.aso_titre.unit}
+                    ></Text>
+                  </View>
+                </View>
               </View>
             </View>
-          </View>
+          )}
 
           {/* Footer */}
           <Image
