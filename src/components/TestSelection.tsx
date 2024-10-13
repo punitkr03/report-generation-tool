@@ -21,11 +21,15 @@ import {
 } from "./ui/select";
 import { Calendar } from "./ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import Navbar from "./Navbar";
+import Metadata from "./Metadata";
 
 export default function TestSelection() {
   const [selectedTestTypes, setSelectedTestTypes] = useState<string[]>([]);
   return (
     <>
+      <Navbar />
+      <Metadata />
       <div className="flex items-center gap-4 px-4">
         <Label className="min-w-fit">Test Types</Label>
         <DropdownMenu>
@@ -1472,7 +1476,9 @@ export default function TestSelection() {
       {selectedTestTypes.length > 0 && (
         <div className="flex w-full justify-center">
           <Button className="bg-slate-700 text-white max-w-fit my-4">
-            Generate Report
+            <a target="_blank" href="/#/report">
+              Generate Report
+            </a>
           </Button>
         </div>
       )}

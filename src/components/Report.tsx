@@ -10,7 +10,7 @@ import {
 import { referenceValues } from "@/constants/reference-values";
 
 // Create Document Component
-export default function Report() {
+export default function Report({ data }: { data: string }) {
   Font.register({
     family: "Open Sans",
     fonts: [
@@ -262,7 +262,7 @@ export default function Report() {
                   marginRight: 10,
                 }}
               >
-                <Text style={{ fontSize: 10 }} render={() => "8.7"}></Text>
+                <Text style={{ fontSize: 10 }} render={() => data}></Text>
               </View>
               <View
                 style={{

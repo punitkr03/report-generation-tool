@@ -1,19 +1,14 @@
-import Metadata from "@/components/Metadata";
-import Navbar from "@/components/Navbar";
 import TestSelection from "@/components/TestSelection";
-import { PDFDownloadLink } from "@react-pdf/renderer";
+import { Route, Routes } from "react-router-dom";
 import Report from "./components/Report";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Metadata />
-      <TestSelection />
-      {/* <Report /> */}
-      {/* <PDFDownloadLink document={<Report />} fileName="report.pdf">
-        Lol
-      </PDFDownloadLink> */}
+      <Routes>
+        <Route path="/" element={<TestSelection />} />
+        <Route path="/report" element={<Report data={"Hii"} />} />
+      </Routes>
     </>
   );
 }
