@@ -104,18 +104,48 @@ export default function TestSelection() {
                 type="number"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    bilirubin: {
+                      //@ts-expect-error - Sab changa-si
+                      ...reportData.bilirubin,
+                      total_bilirubin: e.target.value,
+                    },
+                  });
+                }}
               />
               <p className="my-auto">Direct Bilirubin</p>
               <Input
                 type="number"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    bilirubin: {
+                      //@ts-expect-error - Sab changa-si
+                      ...reportData.bilirubin,
+                      direct_bilirubin: e.target.value,
+                    },
+                  });
+                }}
               />
               <p className="my-auto">Indirect Bilirubin</p>
               <Input
                 type="number"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    bilirubin: {
+                      //@ts-expect-error - Sab changa-si
+                      ...reportData.bilirubin,
+                      indirect_bilirubin: e.target.value,
+                    },
+                  });
+                }}
               />
             </div>
           </div>
@@ -1484,22 +1514,20 @@ export default function TestSelection() {
 
       {selectedTestTypes.length > 0 && (
         <div className="flex w-full justify-center">
-          <Button className="bg-slate-700 text-white max-w-fit my-4">
-            <a
-              target="_blank"
-              href="/#/report"
-              onClick={() => {
-                localStorage.setItem(
-                  "data",
-                  JSON.stringify({
-                    selectedTestTypes: selectedTestTypes,
-                    reportData: reportData,
-                  })
-                );
-              }}
-            >
-              Generate Report
-            </a>
+          <Button
+            className="bg-slate-700 text-white max-w-fit my-4"
+            onClick={() => {
+              localStorage.setItem(
+                "data",
+                JSON.stringify({
+                  selectedTestTypes: selectedTestTypes,
+                  reportData: reportData,
+                })
+              );
+              window.open("/#/report", "_blank");
+            }}
+          >
+            Generate Report
           </Button>
         </div>
       )}

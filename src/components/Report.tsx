@@ -199,105 +199,336 @@ export default function Report() {
 
           {/* Test results will be added here */}
           {/* ASO Titre */}
-          {selectedTests && selectedTests.includes("aso_titre") && (
-            <View
-              style={{
-                marginHorizontal: 10,
-                borderBottom: "1px solid black",
-              }}
-            >
+          {selectedTests &&
+            selectedTests.includes("aso_titre") &&
+            reportData["aso_titre"] !== undefined && (
               <View
                 style={{
-                  width: "97%",
-                  marginTop: "2px",
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
                 }}
               >
                 <View
                   style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
+                    width: "97%",
+                    marginTop: "2px",
                   }}
                 >
                   <View
                     style={{
-                      width: "35%",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
                     }}
                   >
-                    <Text
+                    <View
                       style={{
-                        fontSize: 12,
-                        fontWeight: 600,
-                        textDecoration: "underline",
+                        width: "35%",
                       }}
                     >
-                      Anti Streptolysin O (ASO)
-                    </Text>
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Anti Streptolysin O (ASO)
+                      </Text>
+                    </View>
                   </View>
                 </View>
+                <View
+                  style={{
+                    width: "97%",
+                    marginTop: "2px",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        ASO titre
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "center",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.aso_titre}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.aso_titre.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "10%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.aso_titre.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                  <Text
+                    style={{
+                      fontSize: 8,
+                      fontWeight: 600,
+                      marginBottom: 5,
+                      textDecoration: "underline",
+                    }}
+                  >
+                    Method: Immunoturbidimetry
+                  </Text>
+                </View>
               </View>
+            )}
+          {selectedTests &&
+            selectedTests.includes("bilirubin") &&
+            reportData["bilirubin"] !== undefined && (
               <View
                 style={{
-                  width: "97%",
-                  marginTop: "2px",
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
                 }}
               >
                 <View
                   style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
+                    width: "97%",
+                    marginTop: "2px",
                   }}
                 >
                   <View
                     style={{
-                      width: "35%",
-                      paddingTop: 3,
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
                     }}
                   >
-                    <Text
+                    <View
                       style={{
-                        fontSize: 10,
+                        width: "35%",
                       }}
                     >
-                      ASO titre
-                    </Text>
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Bilirubin
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                    marginTop: "2px",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Total Bilirubin
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "center",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.bilirubin.total_bilirubin}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.bilirubin.total_bilirubin.value
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "10%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.bilirubin.total_bilirubin.unit
+                        }
+                      ></Text>
+                    </View>
                   </View>
                   <View
                     style={{
-                      width: "20%",
-                      padding: 3,
-                      textAlign: "center",
-                      marginRight: 10,
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
                     }}
                   >
-                    <Text
-                      style={{ fontSize: 10 }}
-                      render={() => reportData.aso_titre}
-                    ></Text>
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Direct Bilirubin
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "center",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.bilirubin.direct_bilirubin}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.bilirubin.direct_bilirubin.value
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "10%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.bilirubin.direct_bilirubin.unit
+                        }
+                      ></Text>
+                    </View>
                   </View>
                   <View
                     style={{
-                      width: "35%",
-                      padding: 3,
-                      textAlign: "left",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
                     }}
                   >
-                    <Text
-                      style={{ fontSize: 10 }}
-                      render={() => referenceValues.aso_titre.value}
-                    ></Text>
-                  </View>
-                  <View style={{ width: "10%", padding: 3 }}>
-                    <Text
-                      style={{ fontSize: 10 }}
-                      render={() => referenceValues.aso_titre.unit}
-                    ></Text>
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Indirect Bilirubin
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "center",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.bilirubin.indirect_bilirubin}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.bilirubin.indirect_bilirubin.value
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "10%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.bilirubin.indirect_bilirubin.unit
+                        }
+                      ></Text>
+                    </View>
                   </View>
                 </View>
               </View>
-            </View>
-          )}
+            )}
 
           {/* Footer */}
           <Image
