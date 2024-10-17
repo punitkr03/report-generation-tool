@@ -33,6 +33,7 @@ export enum ReferenceValuesEnum {
   SERUM_SODIUM = "serum_sodium",
   SGOT = "sgot",
   SGPT = "sgpt",
+  SPUTUM_AFB = "sputum_afb",
   STOOL = "stool",
   TOTAL_CHOLESTEROL = "total_cholesterol",
   TOTAL_PROTEIN = "total_protein",

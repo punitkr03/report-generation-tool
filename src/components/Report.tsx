@@ -529,6 +529,131 @@ export default function Report() {
                 </View>
               </View>
             )}
+          {selectedTests &&
+            selectedTests.includes("btct") &&
+            reportData["btct"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                    marginTop: "2px",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Anti Streptolysin O (ASO)
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                    marginTop: "2px",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        ASO titre
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        ASO titre
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "center",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.aso_titre}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.btct.clotting_time.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "10%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.btct.clotting_time.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                  <Text
+                    style={{
+                      fontSize: 8,
+                      fontWeight: 600,
+                      marginBottom: 5,
+                      textDecoration: "underline",
+                    }}
+                  >
+                    Method: Immunoturbidimetry
+                  </Text>
+                </View>
+              </View>
+            )}
 
           {/* Footer */}
           <Image

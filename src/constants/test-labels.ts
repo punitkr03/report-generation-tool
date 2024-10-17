@@ -137,6 +137,10 @@ export const testLabels = [
     value: ReferenceValuesEnum.SGPT,
   },
   {
+    label: "Sputum AFB",
+    value: ReferenceValuesEnum.SPUTUM_AFB,
+  },
+  {
     label: "Stool Examination",
     value: ReferenceValuesEnum.STOOL,
   },

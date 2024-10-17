@@ -27,7 +27,9 @@ import {
 export default function TestSelection() {
   const [selectedTestTypes, setSelectedTestTypes] = useState<string[]>([]);
   const [reportData, setReportData] = useState({});
-  console.log("selectedTestTypes", selectedTestTypes);
+  const [ppdGivenDate, setPpdGivenDate] = useState<Date | undefined>(undefined);
+  const [ppdReadDate, setPpdReadDate] = useState<Date | undefined>(undefined);
+  console.log(ppdReadDate);
   console.log(reportData);
   return (
     <>
@@ -160,15 +162,35 @@ export default function TestSelection() {
             <div className="flex items-center gap-2 my-2">
               <p className="my-auto">Bleeding Time</p>
               <Input
-                type="number"
+                type="text"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    btct: {
+                      //@ts-expect-error - Sab changa-si
+                      ...reportData.btct,
+                      bleeding_time: e.target.value,
+                    },
+                  });
+                }}
               />
               <p className="my-auto">Clotting Time</p>
               <Input
-                type="number"
+                type="text"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    btct: {
+                      //@ts-expect-error - Sab changa-si
+                      ...reportData.btct,
+                      clotting_time: e.target.value,
+                    },
+                  });
+                }}
               />
             </div>
           </div>
@@ -184,12 +206,32 @@ export default function TestSelection() {
                 type="number"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    blood_glucose: {
+                      //@ts-expect-error - Sab changa-si
+                      ...reportData.blood_glucose,
+                      fasting_plasma_glucose: e.target.value,
+                    },
+                  });
+                }}
               />
               <p className="my-auto">Post Prandial Blood Sugar</p>
               <Input
                 type="number"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    blood_glucose: {
+                      //@ts-expect-error - Sab changa-si
+                      ...reportData.blood_glucose,
+                      post_prandial_blood_sugar: e.target.value,
+                    },
+                  });
+                }}
               />
             </div>
           </div>
@@ -207,6 +249,12 @@ export default function TestSelection() {
                 type="number"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    blood_glucose_random: e.target.value,
+                  });
+                }}
               />
             </div>
           </div>
@@ -218,20 +266,43 @@ export default function TestSelection() {
             <h1 className="text-xl font-semibold">Blood Group</h1>
             <div className="flex items-center gap-2 my-2">
               <p className="my-auto">ABO Grouping</p>
-              <Select>
+              <Select
+                onValueChange={(value) => {
+                  setReportData({
+                    ...reportData,
+                    blood_group: {
+                      //@ts-expect-error - Sab changa-si
+                      ...reportData.blood_group,
+                      abo_grouping: value,
+                    },
+                  });
+                }}
+              >
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Select blood group" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectItem value="a">A</SelectItem>
+                    <SelectItem value="b">B</SelectItem>
                     <SelectItem value="ab">AB</SelectItem>
                     <SelectItem value="o">O</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
               <p className="my-auto">RH (Factor)</p>
-              <Select>
+              <Select
+                onValueChange={(value) => {
+                  setReportData({
+                    ...reportData,
+                    blood_group: {
+                      //@ts-expect-error - Sab changa-si
+                      ...reportData.blood_group,
+                      rh_factor: value,
+                    },
+                  });
+                }}
+              >
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Select RH Factor" />
                 </SelectTrigger>
@@ -256,6 +327,12 @@ export default function TestSelection() {
                 type="number"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    blood_urea: e.target.value,
+                  });
+                }}
               />
             </div>
           </div>
@@ -271,6 +348,12 @@ export default function TestSelection() {
                 type="number"
                 placeholder="Enter value"
                 className="max-w-40"
+                onChange={(e) => {
+                  setReportData({
+                    ...reportData,
+                    calcium: e.target.value,
+                  });
+                }}
               />
             </div>
           </div>
@@ -287,24 +370,64 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbc: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbc,
+                        haemoglobin: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Total WBC count</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbc: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbc,
+                        total_wbc_count: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">RBC Count</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbc: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbc,
+                        rbc_count: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Platelet Count</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbc: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbc,
+                        platelet_count: e.target.value,
+                      },
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -318,36 +441,120 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbc: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbc,
+                        differential_count: {
+                          //@ts-expect-error - Sab changa-si
+                          ...reportData.cbc.differential_count,
+                          neutrophils: e.target.value,
+                        },
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Lymphocytes</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbc: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbc,
+                        differential_count: {
+                          //@ts-expect-error - Sab changa-si
+                          ...reportData.cbc.differential_count,
+                          lymphocytes: e.target.value,
+                        },
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Monocytes</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbc: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbc,
+                        differential_count: {
+                          //@ts-expect-error - Sab changa-si
+                          ...reportData.cbc.differential_count,
+                          monocytes: e.target.value,
+                        },
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Eosinophils</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbc: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbc,
+                        differential_count: {
+                          //@ts-expect-error - Sab changa-si
+                          ...reportData.cbc.differential_count,
+                          eosinophils: e.target.value,
+                        },
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Basophils</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbc: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbc,
+                        differential_count: {
+                          //@ts-expect-error - Sab changa-si
+                          ...reportData.cbc.differential_count,
+                          basophils: e.target.value,
+                        },
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">PCV (Packed Cell Volume)</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbc: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbc,
+                        differential_count: {
+                          //@ts-expect-error - Sab changa-si
+                          ...reportData.cbc.differential_count,
+                          pcv: e.target.value,
+                        },
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">MCV (Mean Corp. Volume)</p>
                 <Input
@@ -383,42 +590,112 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbp: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbp,
+                        haemoglobin: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Total WBC count</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbp: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbp,
+                        total_wbc_count: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Neutrophils</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbp: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbp,
+                        neutrophils: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Lymphocytes</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbp: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbp,
+                        lymphocytes: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Monocytes</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbp: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbp,
+                        monocytes: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Eosinophils</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbp: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbp,
+                        eosinophils: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Basophils</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      cbp: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.cbp,
+                        basophils: e.target.value,
+                      },
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -438,6 +715,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      crp: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -455,6 +738,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      creatinine_serum: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -472,36 +761,96 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      differential_count: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.differential_count,
+                        neutrophils: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Lymphocytes</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      differential_count: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.differential_count,
+                        lymphocytes: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Monocytes</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      differential_count: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.differential_count,
+                        monocytes: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Eosinophils</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      differential_count: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.differential_count,
+                        eosinophils: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Basophils</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      differential_count: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.differential_count,
+                        basophils: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">PCV (Packed Cell Volume)</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      differential_count: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.differential_count,
+                        pcv: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">MCV (Mean Corp. Volume)</p>
                 <Input
@@ -537,18 +886,48 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      electrolytes: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.electrolytes,
+                        serum_sodium: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Serum Potassium</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      electrolytes: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.electrolytes,
+                        serum_potassium: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto">Serum Chloride</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      electrolytes: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.electrolytes,
+                        serum_chloride: e.target.value,
+                      },
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -568,6 +947,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      esr: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -585,6 +970,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="max-w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      fasting_plasma_glucose: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -598,7 +989,14 @@ export default function TestSelection() {
               <h1 className="text-xl font-semibold">HCG</h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Urine Pregnancy Card Test</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      hcg: value,
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
@@ -627,18 +1025,48 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      kft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.kft,
+                        blood_urea: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Creatinine Serum</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      kft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.kft,
+                        creatinine_serum: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Uric Acid</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      kft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.kft,
+                        uric_acid: e.target.value,
+                      },
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -656,30 +1084,80 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lipid_profile: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lipid_profile,
+                        total_cholesterol: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Triglycerides</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lipid_profile: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lipid_profile,
+                        triglycerides: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">HDL Cholesterol</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lipid_profile: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lipid_profile,
+                        hdl_cholesterol: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">LDL Cholesterol</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lipid_profile: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lipid_profile,
+                        ldl_cholesterol: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">VLDL Cholesterol</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lipid_profile: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lipid_profile,
+                        vldl_cholesterol: e.target.value,
+                      },
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -697,60 +1175,160 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lft,
+                        total_bilirubin: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Direct Bilirubin</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lft,
+                        direct_bilirubin: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Indirect Bilirubin</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lft,
+                        indirect_bilirubin: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">ALT (SGPT)</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lft,
+                        alt_sgpt: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">AST (SGOT)</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lft,
+                        ast_sgot: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Alkaline Phosphatase</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lft,
+                        alkaline_phosphatase: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Total Protein</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lft,
+                        total_protein: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Albumin</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lft,
+                        albumin: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Globulin</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lft,
+                        globulin: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">A/G Ratio</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      lft: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.lft,
+                        a_g_ratio: e.target.value,
+                      },
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -764,7 +1342,14 @@ export default function TestSelection() {
               <h1 className="text-xl font-semibold">Malaria</h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Blood smear for MP</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      malaria: value,
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
@@ -787,7 +1372,18 @@ export default function TestSelection() {
               <h1 className="text-xl font-semibold">Malaria Antigen Test</h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Plasmodium vivax</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      malaria_antigen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.malaria_antigen,
+                        plasmodium_vivax: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
@@ -799,7 +1395,18 @@ export default function TestSelection() {
                   </SelectContent>
                 </Select>
                 <p className="my-auto pr-4">Plasmodium falciparum</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      malaria_antigen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.malaria_antigen,
+                        plasmodium_falciparum: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
@@ -824,19 +1431,59 @@ export default function TestSelection() {
                 <p className="my-auto pr-4">PPD Given On</p>
                 <Popover>
                   <PopoverTrigger>
-                    <Input placeholder="Select date" />
+                    <Input
+                      placeholder="Select date"
+                      value={
+                        ppdGivenDate ? ppdGivenDate.toLocaleDateString() : ""
+                      }
+                      readOnly
+                    />
                   </PopoverTrigger>
                   <PopoverContent>
-                    <Calendar mode="single" />
+                    <Calendar
+                      mode="single"
+                      selected={ppdGivenDate}
+                      onSelect={(value) => {
+                        setReportData({
+                          ...reportData,
+                          mantoux_test: {
+                            //@ts-expect-error Sab Changa-si
+                            ...reportData.mantoux_test,
+                            ppdGivenDate: value,
+                          },
+                        });
+                        setPpdGivenDate(value);
+                      }}
+                    />
                   </PopoverContent>
                 </Popover>
                 <p className="my-auto pr-4">Reading On</p>
                 <Popover>
                   <PopoverTrigger>
-                    <Input placeholder="Select date" />
+                    <Input
+                      placeholder="Select date"
+                      value={
+                        ppdReadDate ? ppdReadDate?.toLocaleDateString() : ""
+                      }
+                      readOnly
+                    />
                   </PopoverTrigger>
                   <PopoverContent>
-                    <Calendar mode="single" />
+                    <Calendar
+                      mode="single"
+                      selected={ppdReadDate}
+                      onSelect={(value) => {
+                        setReportData({
+                          ...reportData,
+                          mantoux_test: {
+                            //@ts-expect-error Sab Changa-si
+                            ...reportData.mantoux_test,
+                            ppdReadDate: value,
+                          },
+                        });
+                        setPpdReadDate(value);
+                      }}
+                    />
                   </PopoverContent>
                 </Popover>
                 <p className="my-auto pr-4">Erythema</p>
@@ -844,12 +1491,32 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      mantoux_test: {
+                        //@ts-expect-error Sab Changa-si
+                        ...reportData.mantoux_test,
+                        erythema: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Induration</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      mantoux_test: {
+                        //@ts-expect-error Sab Changa-si
+                        ...reportData.mantoux_test,
+                        induration: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">P.P.D Injected</p>
                 <div className="flex items-center gap-2 col-span-3">
@@ -857,11 +1524,32 @@ export default function TestSelection() {
                     type="number"
                     placeholder="Enter value"
                     className="w-40"
+                    onChange={(e) => {
+                      setReportData({
+                        ...reportData,
+                        mantoux_test: {
+                          //@ts-expect-error Sab Changa-si
+                          ...reportData.mantoux_test,
+                          ppdInjected: e.target.value,
+                        },
+                      });
+                    }}
                   />
                   TU of Purified Protein Derivative
                 </div>
                 <p className="my-auto pr-4">Interpretation</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      mantoux_test: {
+                        //@ts-expect-error Sab Changa-si
+                        ...reportData.mantoux_test,
+                        interpretation: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
@@ -888,6 +1576,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      platelet: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -907,6 +1601,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      post_prandial_blood_sugar: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -926,18 +1626,48 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      pt_inr: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.pt_inr,
+                        test: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Control</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      pt_inr: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.pt_inr,
+                        control: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">INR</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      pt_inr: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.pt_inr,
+                        inr: e.target.value,
+                      },
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -957,6 +1687,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      ra_test: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -974,6 +1710,16 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        abstinence: e.target.value,
+                      },
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -985,11 +1731,56 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        quantity: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Colour</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        colour: e.target.value,
+                      },
+                    });
+                  }}
+                />
                 <p className="my-auto pr-4">Reaction</p>
-                <Input placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        reaction: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="alkaline">ALKALINE</SelectItem>
+                      <SelectItem value="acidic">ACIDIC</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
               </div>
             </div>
             <div>
@@ -1000,45 +1791,126 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        sperm_count: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Total Motile</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        total_motile: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Actively Motile</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        actively_motile: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Sluggishly Motile</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        sluggishly_motile: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Non Motile</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        non_motile: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Pus Cells</p>
                 <Input
-                  type="number"
+                  type="text"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        pus_cells: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Epithelial Cells</p>
                 <Input
-                  type="number"
+                  type="text"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        epithelial_cells: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">RBC</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      semen: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.semen,
+                        rbc: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
@@ -1061,7 +1933,18 @@ export default function TestSelection() {
               <h1 className="text-xl font-semibold">Serology</h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">HIV (1&2): </p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      serology: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.serology,
+                        hiv: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
@@ -1073,7 +1956,18 @@ export default function TestSelection() {
                   </SelectContent>
                 </Select>
                 <p className="my-auto pr-4">HbsAg: </p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      serology: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.serology,
+                        hbsag: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
@@ -1085,7 +1979,18 @@ export default function TestSelection() {
                   </SelectContent>
                 </Select>
                 <p className="my-auto pr-4">VDRL: </p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      serology: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.serology,
+                        vdrl: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
@@ -1097,7 +2002,18 @@ export default function TestSelection() {
                   </SelectContent>
                 </Select>
                 <p className="my-auto pr-4">HCV</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      serology: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.serology,
+                        hcv: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
@@ -1124,6 +2040,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      serum_chloride: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -1141,6 +2063,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      serum_potassium: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -1158,6 +2086,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      serum_sodium: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -1175,6 +2109,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      sgot: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -1192,7 +2132,43 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      sgpt: e.target.value,
+                    });
+                  }}
                 />
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+      {selectedTestTypes.includes("sputum_afb") && (
+        <>
+          <div className="mx-4 mt-5 flex flex-wrap border-b-2">
+            <div>
+              <h1 className="text-xl font-semibold">Sputum for AFB</h1>
+              <div className="grid grid-cols-6 items-center gap-2 my-2">
+                <p className="my-auto pr-4">Sputum for AFB</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      sputum_afb: value,
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="positive">POSITIVE</SelectItem>
+                      <SelectItem value="negative">NEGATIVE</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
               </div>
             </div>
           </div>
@@ -1208,30 +2184,180 @@ export default function TestSelection() {
               <h1 className="text-xl font-semibold">Physical Examination</h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Color</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      stool: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.stool,
+                        color: e.target.value,
+                      },
+                    });
+                  }}
+                />
                 <p className="my-auto pr-4">Consistency</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      stool: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.stool,
+                        consistency: e.target.value,
+                      },
+                    });
+                  }}
+                />
                 <p className="my-auto pr-4">Parasite</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      stool: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.stool,
+                        parasite: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="present">PRESENT</SelectItem>
+                      <SelectItem value="absent">ABSENT</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
               </div>
               <h1 className="text-xl font-semibold">Microscopic Examination</h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Cysts</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      stool: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.stool,
+                        cysts: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="found">FOUND</SelectItem>
+                      <SelectItem value="not_found">NOT FOUND</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Ova</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      stool: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.stool,
+                        ova: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="found">FOUND</SelectItem>
+                      <SelectItem value="not_found">NOT FOUND</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Pus cells</p>
                 <Input
-                  type="number"
+                  type="text"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      stool: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.stool,
+                        pus_cells: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">R.B.C</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      stool: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.stool,
+                        rbc: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="present">PRESENT</SelectItem>
+                      <SelectItem value="absent">ABSENT</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Epithelial cells</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      stool: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.stool,
+                        epithelial_cells: e.target.value,
+                      },
+                    });
+                  }}
+                />
                 <p className="my-auto pr-4">Macrophages</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      stool: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.stool,
+                        macrophages: e.target.value,
+                      },
+                    });
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -1248,6 +2374,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      total_cholesterol: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -1265,6 +2397,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      total_protein: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -1282,6 +2420,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      triglycerides: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -1297,37 +2441,251 @@ export default function TestSelection() {
               </h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Specimen</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  value={"URINE"}
+                  disabled
+                />
                 <p className="my-auto pr-4">Gram stain</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        gram_stain: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="present">PRESENT</SelectItem>
+                      <SelectItem value="absent">ABSENT</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Organism Isolated</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        organism_isolated: e.target.value,
+                      },
+                    });
+                  }}
+                />
               </div>
               <h1 className="text-xl font-semibold">
                 Antibiotic Susceptibility Report
               </h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Aztreonam(AT)</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
-                <p className="my-auto pr-4">Cefotaxime(CTX)</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
-                <p className="my-auto pr-4">Cefdinir(CD) </p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
-                <p className="my-auto pr-4">Ceftriaxone(CRO) </p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
-                <p className="my-auto pr-4">Cefuroxime(XM)</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
-                <p className="my-auto pr-4">Ceftazidime(CAZ)</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
-                <p className="my-auto pr-4">Cefixime(FIX) </p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
-                <p className="my-auto pr-4">Amikacin (AK)</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        aztreonam: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
+                      <SelectItem value="+">+</SelectItem>
+                      <SelectItem value="++">++</SelectItem>
+                      <SelectItem value="+++">+++</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <p className="my-auto pr-4">Cefotaxime(CTX)</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        cefotaxime: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
+                      <SelectItem value="+">+</SelectItem>
+                      <SelectItem value="++">++</SelectItem>
+                      <SelectItem value="+++">+++</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <p className="my-auto pr-4">Cefdinir(CD)</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        cefdinir: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
+                      <SelectItem value="+">+</SelectItem>
+                      <SelectItem value="++">++</SelectItem>
+                      <SelectItem value="+++">+++</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <p className="my-auto pr-4">Ceftriaxone(CRO)</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        ceftriaxone: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
+                      <SelectItem value="+">+</SelectItem>
+                      <SelectItem value="++">++</SelectItem>
+                      <SelectItem value="+++">+++</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <p className="my-auto pr-4">Cefuroxime(XM)</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        cefuroxime: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
+                      <SelectItem value="+">+</SelectItem>
+                      <SelectItem value="++">++</SelectItem>
+                      <SelectItem value="+++">+++</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <p className="my-auto pr-4">Ceftazidime(CAZ)</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        ceftazidime: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
+                      <SelectItem value="+">+</SelectItem>
+                      <SelectItem value="++">++</SelectItem>
+                      <SelectItem value="+++">+++</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <p className="my-auto pr-4">Cefixime(FIX)</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        cefixime: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
+                      <SelectItem value="+">+</SelectItem>
+                      <SelectItem value="++">++</SelectItem>
+                      <SelectItem value="+++">+++</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <p className="my-auto pr-4">Amikacin (AK)</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        amikacin: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
                       <SelectItem value="+">+</SelectItem>
                       <SelectItem value="++">++</SelectItem>
                       <SelectItem value="+++">+++</SelectItem>
@@ -1335,12 +2693,24 @@ export default function TestSelection() {
                   </SelectContent>
                 </Select>
                 <p className="my-auto pr-4">Nitrofurantoin(NI)</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        nitrofurantoin: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
                       <SelectItem value="+">+</SelectItem>
                       <SelectItem value="++">++</SelectItem>
                       <SelectItem value="+++">+++</SelectItem>
@@ -1348,12 +2718,24 @@ export default function TestSelection() {
                   </SelectContent>
                 </Select>
                 <p className="my-auto pr-4">Nalidixic acid(NA)</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        nalidixic_acid: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
                       <SelectItem value="+">+</SelectItem>
                       <SelectItem value="++">++</SelectItem>
                       <SelectItem value="+++">+++</SelectItem>
@@ -1361,12 +2743,24 @@ export default function TestSelection() {
                   </SelectContent>
                 </Select>
                 <p className="my-auto pr-4">Gentamicin (GM)</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        gentamicin: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
                       <SelectItem value="+">+</SelectItem>
                       <SelectItem value="++">++</SelectItem>
                       <SelectItem value="+++">+++</SelectItem>
@@ -1374,12 +2768,24 @@ export default function TestSelection() {
                   </SelectContent>
                 </Select>
                 <p className="my-auto pr-4">Ciprofloxacin(CI)</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        ciprofloxacin: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
                       <SelectItem value="+">+</SelectItem>
                       <SelectItem value="++">++</SelectItem>
                       <SelectItem value="+++">+++</SelectItem>
@@ -1387,12 +2793,24 @@ export default function TestSelection() {
                   </SelectContent>
                 </Select>
                 <p className="my-auto pr-4">Norfloxacin (NOR)</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        norfloxacin: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
                       <SelectItem value="+">+</SelectItem>
                       <SelectItem value="++">++</SelectItem>
                       <SelectItem value="+++">+++</SelectItem>
@@ -1400,12 +2818,24 @@ export default function TestSelection() {
                   </SelectContent>
                 </Select>
                 <p className="my-auto pr-4">Ofloxacin (OF)</p>
-                <Select>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_cs: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_cs,
+                        ofloxacin: value,
+                      },
+                    });
+                  }}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Select result" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
+                      <SelectItem value="resistant">RESISTANT</SelectItem>
                       <SelectItem value="+">+</SelectItem>
                       <SelectItem value="++">++</SelectItem>
                       <SelectItem value="+++">+++</SelectItem>
@@ -1425,51 +2855,270 @@ export default function TestSelection() {
               <h1 className="text-xl font-semibold">Physical Examination</h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Color</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        color: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="pale_yellow">Pale Yellow</SelectItem>
+                      <SelectItem value="yellow">Yellow</SelectItem>
+                      <SelectItem value="red">Red</SelectItem>
+                      <SelectItem value="brown">Brown</SelectItem>
+                      <SelectItem value="straw">Straw</SelectItem>
+                      <SelectItem value="milky">Milky</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Appearance</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        appearance: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="clear">Clear</SelectItem>
+                      <SelectItem value="hazy">Hazy</SelectItem>
+                      <SelectItem value="slightly_hazy">
+                        Slightly Hazy
+                      </SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Reaction (pH)</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        reaction_ph: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Specific Gravity</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        specific_gravity: e.target.value,
+                      },
+                    });
+                  }}
                 />
               </div>
               <h1 className="text-xl font-semibold">Chemical Examination</h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Protein</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        protein: e.target.value,
+                      },
+                    });
+                  }}
+                />
                 <p className="my-auto pr-4">Glucose</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        glucose: e.target.value,
+                      },
+                    });
+                  }}
+                />
                 <p className="my-auto pr-4">Blood</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        blood: e.target.value,
+                      },
+                    });
+                  }}
+                />
                 <p className="my-auto pr-4">Ketones</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        ketones: e.target.value,
+                      },
+                    });
+                  }}
+                />
               </div>
               <h1 className="text-xl font-semibold">Microscopic Examination</h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Pus cells</p>
                 <Input
-                  type="number"
+                  type="text"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        pus_cells: e.target.value,
+                      },
+                    });
+                  }}
                 />
                 <p className="my-auto pr-4">Epithelial cells</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        epithelial_cells: e.target.value,
+                      },
+                    });
+                  }}
+                />
                 <p className="my-auto pr-4">R.B.C</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        rbc: e.target.value,
+                      },
+                    });
+                  }}
+                />
                 <p className="my-auto pr-4">Casts</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        casts: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="present">PRESENT</SelectItem>
+                      <SelectItem value="absent">ABSENT</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Crystals</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        crystals: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="present">PRESENT</SelectItem>
+                      <SelectItem value="absent">ABSENT</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Others</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      urine_re: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.urine_re,
+                        others: e.target.value,
+                      },
+                    });
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -1486,6 +3135,12 @@ export default function TestSelection() {
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
+                  onChange={(e) => {
+                    setReportData({
+                      ...reportData,
+                      uric_acid: e.target.value,
+                    });
+                  }}
                 />
               </div>
             </div>
@@ -1499,13 +3154,149 @@ export default function TestSelection() {
               <h1 className="text-xl font-semibold">Widal Test</h1>
               <div className="grid grid-cols-6 items-center gap-2 my-2">
                 <p className="my-auto pr-4">Salmonella Typhi - O</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      widal_test: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.widal_test,
+                        salmonella_typhi_o: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="no_agglutination_seen">
+                        No agglutination seen
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_320">
+                        Agglutination seen 1:320
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_160">
+                        Agglutination seen 1:160
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_80">
+                        Agglutination seen 1:80
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_40">
+                        Agglutination seen 1:40
+                      </SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Salmonella Typhi - H</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      widal_test: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.widal_test,
+                        salmonella_typhi_h: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="no_agglutination_seen">
+                        No agglutination seen
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_320">
+                        Agglutination seen 1:320
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_160">
+                        Agglutination seen 1:160
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_80">
+                        Agglutination seen 1:80
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_40">
+                        Agglutination seen 1:40
+                      </SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Salmonella Para Typhi - AH</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      widal_test: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.widal_test,
+                        salmonella_typhi_ah: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="no_agglutination_seen">
+                        No agglutination seen
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_320">
+                        Agglutination seen 1:320
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_160">
+                        Agglutination seen 1:160
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_80">
+                        Agglutination seen 1:80
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_40">
+                        Agglutination seen 1:40
+                      </SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
                 <p className="my-auto pr-4">Salmonella Para Typhi - BH</p>
-                <Input type="text" placeholder="Enter value" className="w-40" />
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      widal_test: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.widal_test,
+                        salmonella_typhi_bh: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="no_agglutination_seen">
+                        No agglutination seen
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_320">
+                        Agglutination seen 1:320
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_160">
+                        Agglutination seen 1:160
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_80">
+                        Agglutination seen 1:80
+                      </SelectItem>
+                      <SelectItem value="agglutination_seen_1_40">
+                        Agglutination seen 1:40
+                      </SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
               </div>
             </div>
           </div>
