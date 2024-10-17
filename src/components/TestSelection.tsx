@@ -29,12 +29,13 @@ export default function TestSelection() {
   const [reportData, setReportData] = useState({});
   const [ppdGivenDate, setPpdGivenDate] = useState<Date | undefined>(undefined);
   const [ppdReadDate, setPpdReadDate] = useState<Date | undefined>(undefined);
-  console.log(ppdReadDate);
-  console.log(reportData);
+  const [metadata, setMetadata] = useState({
+    patientTitle: "mr",
+  });
   return (
     <>
       <Navbar />
-      <Metadata />
+      <Metadata setMetadata={setMetadata} />
       <div className="flex items-center gap-4 px-4">
         <Label className="min-w-fit">Test Types</Label>
         <DropdownMenu>
@@ -3308,6 +3309,7 @@ export default function TestSelection() {
           <Button
             className="bg-slate-700 text-white max-w-fit my-4"
             onClick={() => {
+              localStorage.setItem("metadata", JSON.stringify(metadata));
               localStorage.setItem(
                 "data",
                 JSON.stringify({
