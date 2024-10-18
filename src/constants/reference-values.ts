@@ -252,7 +252,7 @@ export const referenceValues = {
   //Blood Glucose Level(Random)
   blood_glucose_random: {
     normal: {
-      value: "90-140",
+      value: "90 - 140",
       unit: "mg/dL",
     },
   },

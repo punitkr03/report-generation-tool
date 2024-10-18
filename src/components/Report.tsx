@@ -563,7 +563,7 @@ export default function Report() {
                           textDecoration: "underline",
                         }}
                       >
-                        Anti Streptolysin O (ASO)
+                        BLEEDING TIME, CLOTTING TIME
                       </Text>
                     </View>
                   </View>
@@ -592,21 +592,7 @@ export default function Report() {
                           fontSize: 10,
                         }}
                       >
-                        ASO titre
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        paddingTop: 3,
-                      }}
-                    >
-                      <Text
-                        style={{
-                          fontSize: 10,
-                        }}
-                      >
-                        ASO titre
+                        Bleeding Time
                       </Text>
                     </View>
                     <View
@@ -619,7 +605,67 @@ export default function Report() {
                     >
                       <Text
                         style={{ fontSize: 10 }}
-                        render={() => reportData.aso_titre}
+                        render={() => reportData.btct.bleeding_time}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.btct.bleeding_time.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "10%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.btct.bleeding_time.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                    marginTop: "2px",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Clotting Time
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "center",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.btct.clotting_time}
                       ></Text>
                     </View>
                     <View
@@ -641,16 +687,284 @@ export default function Report() {
                       ></Text>
                     </View>
                   </View>
-                  <Text
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("blood_glucose") &&
+            reportData["blood_glucose"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                    marginTop: "2px",
+                  }}
+                >
+                  <View
                     style={{
-                      fontSize: 8,
-                      fontWeight: 600,
-                      marginBottom: 5,
-                      textDecoration: "underline",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
                     }}
                   >
-                    Method: Immunoturbidimetry
-                  </Text>
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        BLOOD GLUCOSE
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                    marginTop: "2px",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Fasting Plasma Glucose
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "center",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          reportData.blood_glucose.fasting_plasma_glucose
+                        }
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `Normal : ${referenceValues.blood_glucose.fasting_plasma_glucose.normal.value}\nImapred GT : ${referenceValues.blood_glucose.fasting_plasma_glucose.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.blood_glucose.fasting_plasma_glucose.diabetic.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "10%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.blood_glucose.fasting_plasma_glucose
+                            .diabetic.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                    marginTop: "2px",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Post Prandial Blood Sugar
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "center",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          reportData.blood_glucose.post_prandial_blood_sugar
+                        }
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `Normal : ${referenceValues.blood_glucose.post_prandial_blood_sugar.normal.value}\nImapred GT : ${referenceValues.blood_glucose.post_prandial_blood_sugar.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.blood_glucose.post_prandial_blood_sugar.diabetic.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "10%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.blood_glucose
+                            .post_prandial_blood_sugar.diabetic.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("blood_glucose_random") &&
+            reportData["blood_glucose_random"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                    marginTop: "2px",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View>
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        BLOOD GLUCOSE LEVEL ( RANDOM )
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                    marginTop: "2px",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Blood Glucose Random
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "center",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.blood_glucose_random}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `Normal : ${referenceValues.blood_glucose_random.normal.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "10%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.blood_glucose_random.normal.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
                 </View>
               </View>
             )}
