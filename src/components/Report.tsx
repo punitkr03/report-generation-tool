@@ -11,7 +11,7 @@ import {
 
 export default function Report() {
   const data = JSON.parse(localStorage.getItem("data") as string);
-  const metadata = JSON.parse(localStorage.getItem("metadata") as string);
+  // const metadata = JSON.parse(localStorage.getItem("metadata") as string);
   console.log(data);
   const selectedTests = data.selectedTestTypes;
   const reportData = data.reportData;
@@ -2419,6 +2419,1086 @@ export default function Report() {
                   </View>
                 </View>
               </>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("crp") &&
+            reportData["crp"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        C REACTIVE PROTEIN (CRP) QUANTATITAIVE
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        CRP
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.crp}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.crp.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.crp.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                  <Text
+                    style={{
+                      fontSize: 8,
+                      fontWeight: 600,
+                      marginBottom: 5,
+                      textDecoration: "underline",
+                    }}
+                  >
+                    Method: Nephelometry
+                  </Text>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("creatinine_serum") &&
+            reportData["creatinine_serum"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        CREATININE
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Creatinine Serum
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.creatinine_serum}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.creatinine_serum.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.creatinine_serum.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("differential_count") &&
+            reportData["differential_count"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View>
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        DIFFERENTIAL COUNT
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Neutrophils
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.differential_count.neutrophils}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `${referenceValues.differential_count.neutrophils.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.differential_count.neutrophils.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Lymphocytes
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.differential_count.lymphocytes}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `${referenceValues.differential_count.lymphocytes.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.differential_count.lymphocytes.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Monocytes
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.differential_count.monocytes}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `${referenceValues.differential_count.monocytes.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.differential_count.monocytes.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Eosinophils
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.differential_count.eosinophils}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `${referenceValues.differential_count.eosinophils.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.differential_count.eosinophils.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Basophils
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.differential_count.basophils}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `${referenceValues.differential_count.basophils.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.differential_count.basophils.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("electrolytes") &&
+            reportData["electrolytes"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        ELECTROLYTES
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Serum Sodium
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.electrolytes.serum_sodium}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.electrolytes.serum_sodium.value
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.electrolytes.serum_sodium.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Serum Potassium
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.electrolytes.serum_potassium}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.electrolytes.serum_potassium.value
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.electrolytes.serum_potassium.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Serum Chloride
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.electrolytes.serum_chloride}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.electrolytes.serum_chloride.value
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.electrolytes.serum_chloride.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("esr") &&
+            reportData["esr"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        ERYTHROCYTE SEDIMENTATION RATE (ESR)
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        ESR (Westergren's method)
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.esr}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `Male : ${referenceValues.esr.male.value}\nFemale : ${referenceValues.esr.female.value}\n1st hr.`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.esr.male.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("fasting_plasma_glucose") &&
+            reportData["fasting_plasma_glucose"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        BLOOD GLUCOSE
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Fasting Plasma Glucose
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.fasting_plasma_glucose}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `Normal : ${referenceValues.fasting_plasma_glucose.normal.value}\nImapred GT : ${referenceValues.fasting_plasma_glucose.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.fasting_plasma_glucose.diabetic.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.fasting_plasma_glucose.diabetic.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("hcg") &&
+            reportData["hcg"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        HCG
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        URINE PREGNANCY CARD TEST
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10, textTransform: "uppercase" }}
+                        render={() => reportData.hcg}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
             )}
 
           {/* Footer */}

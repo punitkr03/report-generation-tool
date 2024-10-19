@@ -84,11 +84,11 @@ export const referenceValues = {
   esr: {
     male: {
       value: "1-10",
-      unit: "mm 1st hr.",
+      unit: "mm",
     },
     female: {
       value: "5-20",
-      unit: "mm 1st hr.",
+      unit: "mm",
     },
   },
   //Complete Blood Picture
@@ -515,7 +515,7 @@ export const referenceValues = {
   },
   //C Reactive Protein (CRP) Quantitative
   crp: {
-    value: "0-10",
+    value: "00-10",
     unit: "mg/L",
   },
   //Prothrombin Time (PT/INR)
