@@ -3501,6 +3501,552 @@ export default function Report() {
               </View>
             )}
 
+          {selectedTests &&
+            selectedTests.includes("kft") &&
+            reportData["kft"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        KFT (KIDNEY FUNCTION TEST)
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Blood urea
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.kft.blood_urea}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.kft.blood_urea.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.kft.blood_urea.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Creatinine Serum
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.kft.creatinine_serum}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.kft.creatinine_serum.value
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.kft.creatinine_serum.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Uric Acid
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.kft.uric_acid}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.kft.uric_acid.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.kft.uric_acid.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("lipid_profile") &&
+            reportData["lipid_profile"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        LIPID PROFILE
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Total Cholesterol
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          reportData.lipid_profile.total_cholesterol
+                        }
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `Desireable : ${referenceValues.lipid_profile.total_cholesterol.desirable.value}\nBorderline : ${referenceValues.lipid_profile.total_cholesterol.borderline.value}\nHigh : ${referenceValues.lipid_profile.total_cholesterol.high.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.lipid_profile.total_cholesterol
+                            .borderline.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Triglycerides
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lipid_profile.triglycerides}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `Normal : ${referenceValues.lipid_profile.triglycerides.normal.value}\nBorderline : ${referenceValues.lipid_profile.triglycerides.borderline.value}\nHigh : ${referenceValues.lipid_profile.triglycerides.high.value}\nVery High : ${referenceValues.lipid_profile.triglycerides.very_high.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.lipid_profile.triglycerides.normal
+                            .unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        HDL Cholesterol
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lipid_profile.hdl_cholesterol}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `Major risk factor for heart disease : ${referenceValues.lipid_profile.hdl_cholesterol.major_risk_factor.value}\nNegative risk factor for heart disease : ${referenceValues.lipid_profile.hdl_cholesterol.negative_risk_factor.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.lipid_profile.hdl_cholesterol
+                            .major_risk_factor.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        LDL Cholesterol
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lipid_profile.ldl_cholesterol}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `Optimal : ${referenceValues.lipid_profile.ldl_cholesterol.optimal.value}\nNear optimal : ${referenceValues.lipid_profile.ldl_cholesterol.near_optimal.value}\nBorderline : ${referenceValues.lipid_profile.ldl_cholesterol.borderline.value}\nHigh : ${referenceValues.lipid_profile.ldl_cholesterol.high.value}\nVery High : ${referenceValues.lipid_profile.ldl_cholesterol.very_high.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.lipid_profile.ldl_cholesterol.optimal
+                            .unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        VLDL Cholesterol
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lipid_profile.vldl_cholesterol}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          `${referenceValues.lipid_profile.vldl_cholesterol.value}`
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.lipid_profile.vldl_cholesterol.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
           {/* Footer */}
           <Image
             src="/footer.png"

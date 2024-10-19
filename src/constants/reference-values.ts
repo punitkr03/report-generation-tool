@@ -429,11 +429,11 @@ export const referenceValues = {
     },
     hdl_cholesterol: {
       major_risk_factor: {
-        value: "Major risk factor for heart disease: <40",
+        value: "\n< 40",
         unit: "mg/dL",
       },
       negative_risk_factor: {
-        value: "Negative risk factor for heart disease: >60",
+        value: "> 60",
         unit: "mg/dL",
       },
     },
