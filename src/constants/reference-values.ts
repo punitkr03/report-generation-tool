@@ -25,7 +25,7 @@ export const referenceValues = {
     },
     rbc_count: {
       value: "4.5-6.5",
-      unit: "million/cumm",
+      unit: "millions/cumm",
     },
     platelet_count: {
       value: "1.50-4.5",
@@ -273,7 +273,7 @@ export const referenceValues = {
   },
   //Urea
   blood_urea: {
-    value: "14-40",
+    value: "14 - 40",
     unit: "mg/dL",
   },
   //Creatinine

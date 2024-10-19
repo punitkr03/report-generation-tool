@@ -3309,6 +3309,8 @@ export default function TestSelection() {
           <Button
             className="bg-slate-700 text-white max-w-fit my-4"
             onClick={() => {
+              localStorage.removeItem("metadata");
+              localStorage.removeItem("data");
               localStorage.setItem("metadata", JSON.stringify(metadata));
               localStorage.setItem(
                 "data",
