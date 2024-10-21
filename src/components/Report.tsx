@@ -4047,6 +4047,889 @@ export default function Report() {
               </View>
             )}
 
+          {selectedTests &&
+            selectedTests.includes("lft") &&
+            reportData["lft"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        LIVER FUNCTION TEST
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Total Bilirubin
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lft.total_bilirubin}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.total_bilirubin.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.total_bilirubin.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Direct Bilirubin
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lft.direct_bilirubin}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.lft.direct_bilirubin.value
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.direct_bilirubin.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Indirect Bilirubin
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lft.indirect_bilirubin}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.lft.indirect_bilirubin.value
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.lft.indirect_bilirubin.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        ALT (SGPT)
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lft.alt_sgpt}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.alt_sgpt.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.alt_sgpt.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        AST (SGOT)
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lft.ast_sgot}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.ast_sgot.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.ast_sgot.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Alkaline Phosphatase
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lft.alkaline_phosphatase}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.lft.alkaline_phosphatase.value
+                        }
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() =>
+                          referenceValues.lft.alkaline_phosphatase.unit
+                        }
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Total Protein
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lft.total_protein}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.total_protein.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.total_protein.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Albumin
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lft.albumin}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.albumin.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.albumin.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Globulin
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lft.globulin}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.globulin.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.globulin.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        A/G Ratio
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.lft.a_g_ratio}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.lft.a_g_ratio.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("malaria") &&
+            reportData["malaria"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        MALARIA
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Blood smear for MP
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10, textTransform: "uppercase" }}
+                        render={() => reportData.malaria}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("malaria_antigen") &&
+            reportData["malaria_antigen"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        MALARIA ANTIGEN TEST
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Plasmodium vivax
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10, textTransform: "uppercase" }}
+                        render={() =>
+                          reportData.malaria_antigen.plasmodium_vivax
+                        }
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 3,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Plasmodium falciparum
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 3,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10, textTransform: "uppercase" }}
+                        render={() =>
+                          reportData.malaria_antigen.plasmodium_falciparum
+                        }
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 3,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 3 }}>
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
           {/* Footer */}
           <Image
             src="/footer.png"
