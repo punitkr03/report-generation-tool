@@ -1450,7 +1450,7 @@ export default function TestSelection() {
                           mantoux_test: {
                             //@ts-expect-error Sab Changa-si
                             ...reportData.mantoux_test,
-                            ppdGivenDate: value,
+                            ppdGivenDate: value?.toLocaleDateString(),
                           },
                         });
                         setPpdGivenDate(value);
@@ -1479,7 +1479,7 @@ export default function TestSelection() {
                           mantoux_test: {
                             //@ts-expect-error Sab Changa-si
                             ...reportData.mantoux_test,
-                            ppdReadDate: value,
+                            ppdReadDate: value?.toLocaleDateString(),
                           },
                         });
                         setPpdReadDate(value);

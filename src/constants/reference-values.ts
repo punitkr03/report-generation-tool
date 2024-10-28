@@ -74,8 +74,7 @@ export const referenceValues = {
       },
     },
   },
-  //Platlet
-  platlet: {
+  platelet: {
     value: "1.50-4.5",
     unit: "lakhs/cumm",
   },
