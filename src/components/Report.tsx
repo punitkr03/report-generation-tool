@@ -260,7 +260,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -274,7 +274,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -287,7 +287,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -296,7 +296,7 @@ export default function Report() {
                         render={() => referenceValues.aso_titre.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.aso_titre.unit}
@@ -369,7 +369,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -383,7 +383,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -396,7 +396,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -407,7 +407,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -426,7 +426,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -440,7 +440,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -453,7 +453,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -464,7 +464,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -483,7 +483,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -497,7 +497,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -510,7 +510,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -521,7 +521,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -586,7 +586,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -600,7 +600,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -613,7 +613,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -622,7 +622,7 @@ export default function Report() {
                         render={() => referenceValues.btct.bleeding_time.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.btct.bleeding_time.unit}
@@ -645,7 +645,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -659,7 +659,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -672,7 +672,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -681,7 +681,7 @@ export default function Report() {
                         render={() => referenceValues.btct.clotting_time.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.btct.clotting_time.unit}
@@ -745,7 +745,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -759,7 +759,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -774,7 +774,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -785,7 +785,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -811,7 +811,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -825,7 +825,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -840,7 +840,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -851,7 +851,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -914,7 +914,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -928,7 +928,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -941,7 +941,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -952,7 +952,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -1018,7 +1018,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -1032,7 +1032,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                         textTransform: "uppercase",
@@ -1046,13 +1046,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -1066,7 +1066,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -1080,7 +1080,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                         textTransform: "uppercase",
@@ -1094,13 +1094,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -1157,7 +1157,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -1171,7 +1171,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -1184,7 +1184,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -1193,7 +1193,7 @@ export default function Report() {
                         render={() => `${referenceValues.blood_urea.value}`}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.blood_urea.unit}
@@ -1253,7 +1253,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -1267,7 +1267,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -1280,7 +1280,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -1289,7 +1289,7 @@ export default function Report() {
                         render={() => `${referenceValues.calcium.value}`}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.calcium.unit}
@@ -1350,7 +1350,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -1364,7 +1364,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -1377,7 +1377,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -1388,7 +1388,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() =>
@@ -1413,7 +1413,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -1427,7 +1427,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -1440,7 +1440,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -1451,7 +1451,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() =>
@@ -1477,7 +1477,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -1491,7 +1491,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -1504,7 +1504,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -1515,7 +1515,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() => referenceValues.cbc.rbc_count.unit}
@@ -1538,7 +1538,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -1552,7 +1552,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -1565,7 +1565,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -1576,7 +1576,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() => referenceValues.cbc.platelet_count.unit}
@@ -1631,7 +1631,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -1645,7 +1645,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -1660,7 +1660,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -1671,7 +1671,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() =>
@@ -1697,7 +1697,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -1711,7 +1711,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -1726,7 +1726,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -1737,7 +1737,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() =>
@@ -1763,7 +1763,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -1777,7 +1777,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -1792,7 +1792,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -1803,7 +1803,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() =>
@@ -1829,7 +1829,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -1843,7 +1843,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -1858,7 +1858,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -1869,7 +1869,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() =>
@@ -1895,7 +1895,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -1909,7 +1909,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -1924,7 +1924,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -1935,7 +1935,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() =>
@@ -2000,7 +2000,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -2014,7 +2014,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -2027,7 +2027,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -2038,7 +2038,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() =>
@@ -2063,7 +2063,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -2077,7 +2077,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -2090,7 +2090,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -2101,7 +2101,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() =>
@@ -2126,7 +2126,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -2140,7 +2140,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -2153,7 +2153,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -2164,7 +2164,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() => referenceValues.cbp.neutrophils.unit}
@@ -2187,7 +2187,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -2201,7 +2201,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -2214,7 +2214,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -2225,7 +2225,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() => referenceValues.cbp.lymphocytes.unit}
@@ -2248,7 +2248,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -2262,7 +2262,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -2275,7 +2275,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -2286,7 +2286,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() => referenceValues.cbp.monocytes.unit}
@@ -2309,7 +2309,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -2323,7 +2323,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -2336,7 +2336,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -2347,7 +2347,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() => referenceValues.cbp.eosinophils.unit}
@@ -2370,7 +2370,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          paddingTop: 3,
+                          paddingTop: 1,
                         }}
                       >
                         <Text
@@ -2384,7 +2384,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "20%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                           marginRight: 10,
                         }}
@@ -2397,7 +2397,7 @@ export default function Report() {
                       <View
                         style={{
                           width: "35%",
-                          padding: 3,
+                          padding: 2,
                           textAlign: "left",
                         }}
                       >
@@ -2408,7 +2408,7 @@ export default function Report() {
                           }
                         ></Text>
                       </View>
-                      <View style={{ width: "15%", padding: 3 }}>
+                      <View style={{ width: "15%", padding: 2 }}>
                         <Text
                           style={{ fontSize: 10 }}
                           render={() => referenceValues.cbp.basophils.unit}
@@ -2473,7 +2473,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -2487,7 +2487,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -2500,7 +2500,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -2509,7 +2509,7 @@ export default function Report() {
                         render={() => referenceValues.crp.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.crp.unit}
@@ -2583,7 +2583,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -2597,7 +2597,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -2610,7 +2610,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -2619,7 +2619,7 @@ export default function Report() {
                         render={() => referenceValues.creatinine_serum.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.creatinine_serum.unit}
@@ -2679,7 +2679,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -2693,7 +2693,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -2706,7 +2706,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -2717,7 +2717,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -2742,7 +2742,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -2756,7 +2756,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -2769,7 +2769,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -2780,7 +2780,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -2805,7 +2805,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -2819,7 +2819,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -2832,7 +2832,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -2843,7 +2843,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -2868,7 +2868,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -2882,7 +2882,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -2895,7 +2895,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -2906,7 +2906,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -2931,7 +2931,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -2945,7 +2945,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -2958,7 +2958,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -2969,7 +2969,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -3035,7 +3035,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3049,7 +3049,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3062,7 +3062,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3073,7 +3073,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -3092,7 +3092,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3106,7 +3106,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3119,7 +3119,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3130,7 +3130,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -3149,7 +3149,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3163,7 +3163,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3176,7 +3176,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3187,7 +3187,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -3253,7 +3253,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3267,7 +3267,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3280,7 +3280,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3291,7 +3291,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.esr.male.unit}
@@ -3355,7 +3355,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3369,7 +3369,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3382,7 +3382,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3393,7 +3393,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -3459,7 +3459,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3473,7 +3473,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3486,13 +3486,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -3553,7 +3553,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3567,7 +3567,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3580,7 +3580,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3589,7 +3589,7 @@ export default function Report() {
                         render={() => referenceValues.kft.blood_urea.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.kft.blood_urea.unit}
@@ -3606,7 +3606,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3620,7 +3620,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3633,7 +3633,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3644,7 +3644,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.kft.creatinine_serum.unit}
@@ -3661,7 +3661,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3675,7 +3675,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3688,7 +3688,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3697,7 +3697,7 @@ export default function Report() {
                         render={() => referenceValues.kft.uric_acid.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.kft.uric_acid.unit}
@@ -3761,7 +3761,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3775,7 +3775,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3790,7 +3790,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3801,7 +3801,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -3821,7 +3821,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3835,7 +3835,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3848,7 +3848,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3859,7 +3859,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -3879,7 +3879,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3893,7 +3893,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3906,7 +3906,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3917,7 +3917,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -3937,7 +3937,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -3951,7 +3951,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -3964,7 +3964,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -3975,7 +3975,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -3995,7 +3995,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4009,7 +4009,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4022,7 +4022,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4033,7 +4033,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -4099,7 +4099,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4113,7 +4113,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4126,7 +4126,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4135,7 +4135,7 @@ export default function Report() {
                         render={() => referenceValues.lft.total_bilirubin.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.lft.total_bilirubin.unit}
@@ -4158,7 +4158,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4172,7 +4172,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4185,7 +4185,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4196,7 +4196,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.lft.direct_bilirubin.unit}
@@ -4219,7 +4219,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4233,7 +4233,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4246,7 +4246,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4257,7 +4257,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -4282,7 +4282,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4296,7 +4296,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4309,7 +4309,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4318,7 +4318,7 @@ export default function Report() {
                         render={() => referenceValues.lft.alt_sgpt.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.lft.alt_sgpt.unit}
@@ -4341,7 +4341,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4355,7 +4355,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4368,7 +4368,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4377,7 +4377,7 @@ export default function Report() {
                         render={() => referenceValues.lft.ast_sgot.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.lft.ast_sgot.unit}
@@ -4400,7 +4400,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4414,7 +4414,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4427,7 +4427,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4438,7 +4438,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -4463,7 +4463,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4477,7 +4477,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4490,7 +4490,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4499,7 +4499,7 @@ export default function Report() {
                         render={() => referenceValues.lft.total_protein.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.lft.total_protein.unit}
@@ -4522,7 +4522,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4536,7 +4536,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4549,7 +4549,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4558,7 +4558,7 @@ export default function Report() {
                         render={() => referenceValues.lft.albumin.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.lft.albumin.unit}
@@ -4581,7 +4581,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4595,7 +4595,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4608,7 +4608,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4617,7 +4617,7 @@ export default function Report() {
                         render={() => referenceValues.lft.globulin.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.lft.globulin.unit}
@@ -4640,7 +4640,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4654,7 +4654,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4667,7 +4667,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -4676,7 +4676,7 @@ export default function Report() {
                         render={() => referenceValues.lft.a_g_ratio.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -4737,7 +4737,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4751,7 +4751,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4764,13 +4764,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -4831,7 +4831,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4845,7 +4845,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4860,13 +4860,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -4886,7 +4886,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4900,7 +4900,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -4915,13 +4915,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -4982,7 +4982,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -4996,7 +4996,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5014,13 +5014,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -5040,7 +5040,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5054,7 +5054,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5072,13 +5072,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -5098,7 +5098,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5112,7 +5112,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5127,13 +5127,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -5153,7 +5153,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5167,7 +5167,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5180,13 +5180,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -5206,7 +5206,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5220,7 +5220,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5233,13 +5233,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -5259,7 +5259,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5274,7 +5274,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5287,7 +5287,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -5298,7 +5298,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -5359,7 +5359,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5373,7 +5373,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5386,7 +5386,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -5395,7 +5395,7 @@ export default function Report() {
                         render={() => referenceValues.platelet.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.platelet.unit}
@@ -5459,7 +5459,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5473,7 +5473,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5486,7 +5486,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -5497,7 +5497,7 @@ export default function Report() {
                         }
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
@@ -5563,7 +5563,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5577,7 +5577,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5590,7 +5590,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -5599,7 +5599,7 @@ export default function Report() {
                         render={() => `${referenceValues.pt_inr.value}`}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.pt_inr.unit}
@@ -5622,7 +5622,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5636,7 +5636,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5649,13 +5649,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ``}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -5675,7 +5675,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5689,7 +5689,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5702,13 +5702,13 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
@@ -5765,7 +5765,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        paddingTop: 3,
+                        paddingTop: 1,
                       }}
                     >
                       <Text
@@ -5779,7 +5779,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "20%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                         marginRight: 10,
                       }}
@@ -5792,7 +5792,7 @@ export default function Report() {
                     <View
                       style={{
                         width: "35%",
-                        padding: 3,
+                        padding: 2,
                         textAlign: "left",
                       }}
                     >
@@ -5801,7 +5801,7 @@ export default function Report() {
                         render={() => referenceValues.ra_test.value}
                       ></Text>
                     </View>
-                    <View style={{ width: "15%", padding: 3 }}>
+                    <View style={{ width: "15%", padding: 2 }}>
                       <Text
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.ra_test.unit}
@@ -5821,6 +5821,310 @@ export default function Report() {
                 </View>
               </View>
             )}
+
+          {selectedTests &&
+            selectedTests.includes("semen") &&
+            reportData["semen"] !== undefined && (
+              <>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                    borderBottom: "1px solid black",
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 600,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          SEMEN ANALYSIS
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Abstinence
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.semen.abstinence}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "Days"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                    borderBottom: "1px solid black",
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 600,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          PHYSICAL EXAMINATION
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Quantity
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.semen.quantity}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Colour
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.semen.colour}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Reaction
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          render={() => reportData.semen.reaction}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </>
+            )}
+
+          <View>
+            <Text
+              style={{
+                fontSize: 10,
+                textAlign: "center",
+                marginTop: 5,
+                marginBottom: 10,
+              }}
+            >
+              <Text
+                style={{
+                  fontWeight: "bold",
+                }}
+              >{`** END OF REPORT **\n`}</Text>
+              {`In case of any typing errors/clarification, please contact the lab immediately.\nPh.No.-7061937894`}
+            </Text>
+          </View>
 
           {/* Footer */}
           <Image
