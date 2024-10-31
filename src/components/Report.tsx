@@ -175,7 +175,8 @@ export default function Report() {
                   style={{
                     paddingVertical: 3,
                     paddingLeft: 3,
-                    textAlign: "left",
+                    textAlign: "center",
+                    transform: "translate(15px, 0)",
                   }}
                 >
                   <Text style={{ fontSize: 10, fontWeight: 700 }}>RESULT</Text>
@@ -5829,7 +5830,6 @@ export default function Report() {
                 <View
                   style={{
                     marginHorizontal: 10,
-                    borderBottom: "1px solid black",
                   }}
                 >
                   <View
@@ -5917,7 +5917,6 @@ export default function Report() {
                 <View
                   style={{
                     marginHorizontal: 10,
-                    borderBottom: "1px solid black",
                   }}
                 >
                   <View
@@ -6105,7 +6104,1064 @@ export default function Report() {
                     </View>
                   </View>
                 </View>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                    borderBottom: "1px solid black",
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 600,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          MICROSCOPIC EXAMINATION
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Sperm count
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.semen.sperm_count}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => `50-150`}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "million/ml"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Total Motile
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.semen.total_motile}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "%"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Actively Motile
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.semen.actively_motile}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "%"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Sluggishly Motile
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.semen.sluggishly_motile}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "%"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Non Motile
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.semen.non_motile}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "%"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Pus Cells
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.semen.pus_cells}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "/HPF"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Epithelial Cells
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.semen.epithelial_cells}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "/HPF"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          RBC
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          render={() => reportData.semen.rbc}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "/HPF"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      fontWeight: 600,
+                      fontSize: 10,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        textDecoration: "underline",
+                      }}
+                    >
+                      Interpretation Notes:-
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 8,
+                        marginBottom: "8px",
+                        marginTop: "4px",
+                      }}
+                    >
+                      The sample should be collection after a minimum of 2 days
+                      and maximum of 7 days of sexual abstinence (ideally 3
+                      days).
+                    </Text>
+                  </View>
+                </View>
               </>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("serology") &&
+            reportData["serology"] !== undefined && (
+              <>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                    borderBottom: "1px solid black",
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 600,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          SEROLOGY
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          HIV (1&2)
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          render={() => reportData.serology.hiv}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          HbsAg
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          render={() => reportData.serology.hbsag}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          VDRL
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          render={() => reportData.serology.vdrl}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          HCV
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          render={() => reportData.serology.hcv}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("serum_chloride") &&
+            reportData["serum_chloride"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        CHLORIDE
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 1,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Serum Chloride
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 2,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.serum_chloride}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 2,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.serum_chloride.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 2 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.serum_chloride.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+          {selectedTests &&
+            selectedTests.includes("serum_potassium") &&
+            reportData["serum_potassium"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        POTASSIUM
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 1,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Serum Potassium
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 2,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.serum_potassium}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 2,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.serum_potassium.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 2 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.serum_potassium.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+          {selectedTests &&
+            selectedTests.includes("serum_sodium") &&
+            reportData["serum_sodium"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        SODIUM
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 1,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Serum Sodium
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 2,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.serum_sodium}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 2,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.serum_sodium.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 2 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.serum_sodium.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
             )}
 
           <View>
