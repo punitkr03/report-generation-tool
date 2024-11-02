@@ -33,6 +33,92 @@ export default function Report() {
     ],
   });
 
+  const antibiotics = [
+    {
+      label: "Amikacin (AK)",
+      value: "amikacin",
+    },
+    {
+      label: "Aztreonam (AT)",
+      value: "aztreonam",
+    },
+    {
+      label: "Cefotaxime (CTX)",
+      value: "cefotaxime",
+    },
+    {
+      label: "Cefdinir (CD)",
+      value: "cefdinir",
+    },
+    {
+      label: "Nitrofurantoin (NI)",
+      value: "nitrofurantoin",
+    },
+    {
+      label: "Ceftriaxone (CRO)",
+      value: "ceftriaxone",
+    },
+    {
+      label: "Nalidixic acid (NA)",
+      value: "nalidixic_acid",
+    },
+    {
+      label: "Gentamicin (GM)",
+      value: "gentamicin",
+    },
+    {
+      label: "Cefuroxime (XM)",
+      value: "cefuroxime",
+    },
+    {
+      label: "Ciprofloxacin (CI)",
+      value: "ciprofloxacin",
+    },
+    {
+      label: "Ceftazidime (CAZ)",
+      value: "ceftazidime",
+    },
+    {
+      label: "Cefixime (FIX)",
+      value: "cefixime",
+    },
+    {
+      label: "Norfloxacin (NOR)",
+      value: "norfloxacin",
+    },
+    {
+      label: "Ofloxacin (OF)",
+      value: "ofloxacin",
+    },
+  ];
+
+  const widal_tests = [
+    {
+      label: "Salmonella Typhi - O",
+      value: "salmonella_typhi_o",
+    },
+    {
+      label: "Salmonella Typhi - H",
+      value: "salmonella_typhi_h",
+    },
+    {
+      label: "Salmonella Para Typhi - AH",
+      value: "salmonella_typhi_ah",
+    },
+    {
+      label: "Salmonella Para Typhi - BH",
+      value: "salmonella_typhi_bh",
+    },
+  ];
+
+  const widal_result = {
+    no_agglutination_seen: "No agglutination seen",
+    agglutination_seen_1_320: "Agglutination seen 1:320",
+    agglutination_seen_1_160: "Agglutination seen 1:160",
+    agglutination_seen_1_80: "Agglutination seen 1:80",
+    agglutination_seen_1_40: "Agglutination seen 1:40",
+  };
+
   return (
     <PDFViewer width="100%" height="800px">
       <Document>
@@ -7457,7 +7543,6 @@ export default function Report() {
                 </View>
               </View>
             )}
-
           {selectedTests &&
             selectedTests.includes("stool") &&
             reportData["stool"] !== undefined && (
@@ -8050,7 +8135,6 @@ export default function Report() {
                 </View>
               </>
             )}
-
           {selectedTests &&
             selectedTests.includes("total_cholesterol") &&
             reportData["total_cholesterol"] !== undefined && (
@@ -8353,6 +8437,1415 @@ export default function Report() {
                       ></Text>
                     </View>
                   </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("urine_cs") &&
+            reportData["urine_cs"] !== undefined && (
+              <>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 600,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          URINE CULTURE & SENSITIVITY
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Specimen
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "URINE"}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Gram stain
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          render={() => reportData.urine_cs.gram_stain}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Organism Isolated
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.urine_cs.organism_isolated}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                    borderBottom: "1px solid black",
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 600,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          ANTIBIOTIC SUSCEPTIBILITY REPORT
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  {antibiotics.map((antibiotic) => (
+                    <View
+                      style={{
+                        width: "97%",
+                      }}
+                    >
+                      <View
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <View
+                          style={{
+                            width: "35%",
+                            paddingTop: 1,
+                          }}
+                        >
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            {antibiotic.label}
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "20%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{
+                              fontSize: 10,
+                              textTransform: "capitalize",
+                            }}
+                            render={() => reportData.urine_cs[antibiotic.value]}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => ``}
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => ""}
+                          ></Text>
+                        </View>
+                      </View>
+                    </View>
+                  ))}
+                </View>
+              </>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("urine_re") &&
+            reportData["urine_re"] !== undefined && (
+              <>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 600,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          URINE R/E:-
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 600,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          PHYSICAL EXAMINATION
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Color
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "capitalize" }}
+                          render={() => reportData.urine_re.color}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Appearance
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "capitalize" }}
+                          render={() => reportData.urine_re.appearance}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Reaction(pH)
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.urine_re.reaction_ph}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Specific Gravity
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          render={() => reportData.urine_re.specific_gravity}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                    borderBottom: "1px solid black",
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 600,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          CHEMICAL EXAMINATION
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Protein
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.urine_re.protein}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => `Absent`}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Glucose
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.urine_re.glucose}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => `Absent`}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Blood
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.urine_re.blood}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => `Negative`}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Ketones
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.urine_re.ketones}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => `Negative`}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    marginHorizontal: 10,
+                    borderBottom: "1px solid black",
+                  }}
+                >
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 600,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          MICROSCOPIC EXAMINATION
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Pus Cells
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.urine_re.pus_cells}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => `0-3`}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "/HPF"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Epithelial Cells
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.urine_re.epithelial_cells}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => `0-1`}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => "/HPF"}
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          RBC
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "capitalize" }}
+                          render={() => reportData.urine_re.rbc}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => `Absent`}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Casts
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          render={() => reportData.urine_re.casts}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => `Absent`}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Crystals
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          render={() => reportData.urine_re.crystals}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => `Absent`}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Others
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.urine_re.others}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("uric_acid") &&
+            reportData["uric_acid"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Anti Streptolysin O (ASO)
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 1,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        ASO titre
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "20%",
+                        padding: 2,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => reportData.uric_acid}
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 2,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.uric_acid.value}
+                      ></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 2 }}>
+                      <Text
+                        style={{ fontSize: 10 }}
+                        render={() => referenceValues.uric_acid.unit}
+                      ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("widal_test") &&
+            reportData["widal_test"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        WIDAL TEST
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  {widal_tests.map((test) => (
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          {test.label}
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "20%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            widal_result[
+                              reportData.widal_test[
+                                test.value
+                              ] as keyof typeof widal_result
+                            ]
+                          }
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
+                    </View>
+                  ))}
                 </View>
               </View>
             )}
