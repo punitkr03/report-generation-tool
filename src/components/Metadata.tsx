@@ -78,7 +78,10 @@ export default function Metadata({
                 selected={collectionDate}
                 onSelect={(value) => {
                   setCollectionDate(value);
-                  setMetadata((prev) => ({ ...prev, collectionDate: value }));
+                  setMetadata((prev) => ({
+                    ...prev,
+                    collectionDate: value?.toLocaleDateString(),
+                  }));
                 }}
               />
             </PopoverContent>
@@ -106,8 +109,8 @@ export default function Metadata({
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="male">Male</SelectItem>
-                <SelectItem value="female">Female</SelectItem>
+                <SelectItem value="Male">Male</SelectItem>
+                <SelectItem value="Female">Female</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
@@ -128,7 +131,10 @@ export default function Metadata({
                 selected={reportingDate}
                 onSelect={(value) => {
                   setReportingDate(value);
-                  setMetadata((prev) => ({ ...prev, reportingDate: value }));
+                  setMetadata((prev) => ({
+                    ...prev,
+                    reportingDate: value?.toLocaleDateString(),
+                  }));
                 }}
               />
             </PopoverContent>

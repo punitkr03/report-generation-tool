@@ -11,8 +11,7 @@ import {
 
 export default function Report() {
   const data = JSON.parse(localStorage.getItem("data") as string);
-  // const metadata = JSON.parse(localStorage.getItem("metadata") as string);
-  console.log(data);
+  const metadata = JSON.parse(localStorage.getItem("metadata") as string);
   const selectedTests = data.selectedTestTypes;
   const reportData = data.reportData;
 
@@ -176,7 +175,7 @@ export default function Report() {
               >
                 <Text
                   style={{ fontSize: 10, fontWeight: 600 }}
-                  render={() => `Patient Name :-`}
+                  render={() => `Patient Name :- ${metadata.patientName}`}
                 ></Text>
               </View>
               <View style={{ width: "50%", padding: 2 }}>
@@ -185,9 +184,8 @@ export default function Report() {
                     fontSize: 10,
                     paddingLeft: 140,
                   }}
-                >
-                  Collection Date :- 25 Sep, 2024
-                </Text>
+                  render={() => `Collection Date :- ${metadata.collectionDate}`}
+                ></Text>
               </View>
             </View>
             <View style={{ display: "flex", flexDirection: "row" }}>
@@ -197,9 +195,12 @@ export default function Report() {
                   padding: 2,
                 }}
               >
-                <Text style={{ fontSize: 10 }}>
-                  Age/Gender :- Years/Male/Female
-                </Text>
+                <Text
+                  style={{ fontSize: 10 }}
+                  render={() =>
+                    ` Age/Gender :- ${metadata.age} Years / ${metadata.gender}`
+                  }
+                ></Text>
               </View>
               <View style={{ width: "50%", padding: 2 }}>
                 <Text
@@ -207,9 +208,8 @@ export default function Report() {
                     fontSize: 10,
                     paddingLeft: 140,
                   }}
-                >
-                  Reporting Date :- 25 Sep, 2024
-                </Text>
+                  render={() => `Reporting Date :- ${metadata.reportingDate}`}
+                ></Text>
               </View>
             </View>
             <View style={{ display: "flex", flexDirection: "row" }}>
@@ -219,7 +219,12 @@ export default function Report() {
                   padding: 2,
                 }}
               >
-                <Text style={{ fontSize: 10 }}>Referral :- Dr. M O</Text>
+                <Text
+                  style={{ fontSize: 10 }}
+                  render={() => `Referral :- ${metadata.referral}`}
+                >
+                  Referral :- Dr. M O
+                </Text>
               </View>
               <View style={{ width: "50%", padding: 2 }}>
                 <Text
@@ -227,6 +232,7 @@ export default function Report() {
                     fontSize: 10,
                     paddingLeft: 140,
                   }}
+                  render={() => `Sample ID :- ${metadata.sampleID}`}
                 >
                   Sample ID :-
                 </Text>
@@ -8672,8 +8678,9 @@ export default function Report() {
                       </View>
                     </View>
                   </View>
-                  {antibiotics.map((antibiotic) => (
+                  {antibiotics.map((antibiotic, idx) => (
                     <View
+                      key={idx}
                       style={{
                         width: "97%",
                       }}
@@ -9791,8 +9798,9 @@ export default function Report() {
                     width: "97%",
                   }}
                 >
-                  {widal_tests.map((test) => (
+                  {widal_tests.map((test, idx) => (
                     <View
+                      key={idx}
                       style={{
                         display: "flex",
                         flexDirection: "row",
