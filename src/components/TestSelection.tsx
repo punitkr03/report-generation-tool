@@ -30,7 +30,7 @@ export default function TestSelection() {
   const [ppdGivenDate, setPpdGivenDate] = useState<Date | undefined>(undefined);
   const [ppdReadDate, setPpdReadDate] = useState<Date | undefined>(undefined);
   const [metadata, setMetadata] = useState({
-    patientTitle: "mr",
+    patientTitle: "Mr",
   });
   return (
     <>
