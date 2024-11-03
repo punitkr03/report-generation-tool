@@ -47,9 +47,9 @@ export default function Metadata({
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="mr">Mr.</SelectItem>
-                <SelectItem value="ms">Ms.</SelectItem>
-                <SelectItem value="mrs">Mrs.</SelectItem>
+                <SelectItem value="Mr">Mr.</SelectItem>
+                <SelectItem value="Ms">Ms.</SelectItem>
+                <SelectItem value="Mrs">Mrs.</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

@@ -16,18 +16,14 @@ export default function Report() {
   const reportData = data.reportData;
 
   Font.register({
-    family: "Open Sans",
+    family: "Cambria",
     fonts: [
       {
-        src: "https://cdn.jsdelivr.net/npm/open-sans-all@0.1.3/fonts/open-sans-regular.ttf",
+        src: "/fonts/Cambria.ttf",
       },
       {
-        src: "https://cdn.jsdelivr.net/npm/open-sans-all@0.1.3/fonts/open-sans-700.ttf",
-        fontWeight: 700,
-      },
-      {
-        src: "https://cdn.jsdelivr.net/npm/open-sans-all@0.1.3/fonts/open-sans-600.ttf",
-        fontWeight: 600,
+        src: "/fonts/Cambria-Bold.ttf",
+        fontWeight: "bold",
       },
     ],
   });
@@ -124,7 +120,7 @@ export default function Report() {
         <Page
           size="A4"
           style={{
-            fontFamily: "Open Sans",
+            fontFamily: "Cambria",
           }}
         >
           <Image
@@ -175,7 +171,9 @@ export default function Report() {
               >
                 <Text
                   style={{ fontSize: 10, fontWeight: 600 }}
-                  render={() => `Patient Name :- ${metadata.patientName}`}
+                  render={() =>
+                    `Patient Name :- ${metadata.patientTitle}. ${metadata.patientName}`
+                  }
                 ></Text>
               </View>
               <View style={{ width: "50%", padding: 2 }}>
@@ -198,7 +196,7 @@ export default function Report() {
                 <Text
                   style={{ fontSize: 10 }}
                   render={() =>
-                    ` Age/Gender :- ${metadata.age} Years / ${metadata.gender}`
+                    `Age/Gender     :- ${metadata.age} Years / ${metadata.gender}`
                   }
                 ></Text>
               </View>
@@ -221,7 +219,7 @@ export default function Report() {
               >
                 <Text
                   style={{ fontSize: 10 }}
-                  render={() => `Referral :- ${metadata.referral}`}
+                  render={() => `Referral            :- ${metadata.referral}`}
                 >
                   Referral :- Dr. M O
                 </Text>
@@ -232,7 +230,7 @@ export default function Report() {
                     fontSize: 10,
                     paddingLeft: 140,
                   }}
-                  render={() => `Sample ID :- ${metadata.sampleID}`}
+                  render={() => `Sample ID          :- ${metadata.sampleID}`}
                 >
                   Sample ID :-
                 </Text>
