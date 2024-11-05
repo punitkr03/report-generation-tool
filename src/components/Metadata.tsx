@@ -67,7 +67,11 @@ export default function Metadata({
               <Input
                 placeholder="Select collection date"
                 value={
-                  collectionDate ? collectionDate?.toLocaleDateString() : ""
+                  collectionDate
+                    ? `${collectionDate.getDate()}/${
+                        collectionDate.getMonth() + 1
+                      }/${collectionDate.getFullYear()}`
+                    : ""
                 }
                 readOnly
               />
@@ -80,7 +84,9 @@ export default function Metadata({
                   setCollectionDate(value);
                   setMetadata((prev) => ({
                     ...prev,
-                    collectionDate: value?.toLocaleDateString(),
+                    collectionDate: `${value?.getDate()}/${
+                      value!.getMonth() + 1
+                    }/${value?.getFullYear()}`,
                   }));
                 }}
               />
@@ -121,7 +127,13 @@ export default function Metadata({
             <PopoverTrigger>
               <Input
                 placeholder="Select collection date"
-                value={reportingDate ? reportingDate?.toLocaleDateString() : ""}
+                value={
+                  reportingDate
+                    ? `${reportingDate.getDate()}/${
+                        reportingDate.getMonth() + 1
+                      }/${reportingDate.getFullYear()}`
+                    : ""
+                }
                 readOnly
               />
             </PopoverTrigger>
@@ -133,7 +145,9 @@ export default function Metadata({
                   setReportingDate(value);
                   setMetadata((prev) => ({
                     ...prev,
-                    reportingDate: value?.toLocaleDateString(),
+                    reportingDate: `${value?.getDate()}/${
+                      value!.getMonth() + 1
+                    }/${value?.getFullYear()}`,
                   }));
                 }}
               />

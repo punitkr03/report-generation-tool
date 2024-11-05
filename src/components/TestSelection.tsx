@@ -1435,7 +1435,11 @@ export default function TestSelection() {
                     <Input
                       placeholder="Select date"
                       value={
-                        ppdGivenDate ? ppdGivenDate.toLocaleDateString() : ""
+                        ppdGivenDate
+                          ? `${ppdGivenDate.getDate()}/${
+                              ppdGivenDate.getMonth() + 1
+                            }/${ppdGivenDate.getFullYear()}`
+                          : ""
                       }
                       readOnly
                     />
@@ -1450,7 +1454,9 @@ export default function TestSelection() {
                           mantoux_test: {
                             //@ts-expect-error Sab Changa-si
                             ...reportData.mantoux_test,
-                            ppdGivenDate: value?.toLocaleDateString(),
+                            ppdGivenDate: `${value?.getDate()}/${
+                              value!.getMonth() + 1
+                            }/${value?.getFullYear()}`,
                           },
                         });
                         setPpdGivenDate(value);
@@ -1464,7 +1470,11 @@ export default function TestSelection() {
                     <Input
                       placeholder="Select date"
                       value={
-                        ppdReadDate ? ppdReadDate?.toLocaleDateString() : ""
+                        ppdReadDate
+                          ? `${ppdReadDate.getDate()}/${
+                              ppdReadDate.getMonth() + 1
+                            }/${ppdReadDate.getFullYear()}`
+                          : ""
                       }
                       readOnly
                     />
@@ -1479,7 +1489,9 @@ export default function TestSelection() {
                           mantoux_test: {
                             //@ts-expect-error Sab Changa-si
                             ...reportData.mantoux_test,
-                            ppdReadDate: value?.toLocaleDateString(),
+                            ppdReadDate: `${value?.getDate()}/${
+                              value!.getMonth() + 1
+                            }/${value?.getFullYear()}`,
                           },
                         });
                         setPpdReadDate(value);
