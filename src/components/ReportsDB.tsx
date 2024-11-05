@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
 import { supabase } from "@/lib/supabase";
+import React, { useEffect } from "react";
+import { MoonLoader } from "react-spinners";
 
 interface ReportData {
   patient_name: string;
@@ -17,6 +18,7 @@ interface ReportData {
 
 export default function ReportsDB() {
   const [reports, setReports] = React.useState<ReportData[]>([]);
+  const [loading, setLoading] = React.useState(true);
 
   async function getReports() {
     const { data, error } = await supabase
@@ -25,9 +27,10 @@ export default function ReportsDB() {
       .order("created_at", { ascending: false });
     if (error) {
       console.error(error);
+      setLoading(false);
     }
-    console.log(data);
     setReports(data as ReportData[]);
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -53,45 +56,63 @@ export default function ReportsDB() {
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
-          {reports.map((report, index) => (
-            <tr key={index}>
-              <td className="px-4 py-2 border-r text-center border-gray-300">
-                {index + 1}
-              </td>
-              <td className="px-4 py-2 border-r border-gray-300">
-                {report.patient_name}
-              </td>
-              <td className="px-4 py-2 border-r border-gray-300">
-                {report.metadata.reportingDate}
-              </td>
-              <td className="px-4 py-2 border-r border-gray-300">
-                {report.metadata.collectionDate}
-              </td>
-              <td className="px-4 py-2">
-                <button
-                  className="bg-black text-white p-2 px-4 rounded-lg"
-                  onClick={() => {
-                    localStorage.removeItem("metadata");
-                    localStorage.removeItem("data");
-                    localStorage.setItem(
-                      "metadata",
-                      JSON.stringify(report.metadata)
-                    );
-                    localStorage.setItem(
-                      "data",
-                      JSON.stringify({
-                        selectedTestTypes: report.data.selectedTestTypes,
-                        reportData: report.data.reportData,
-                      })
-                    );
-                    window.open("/#/report", "_blank");
-                  }}
-                >
-                  View
-                </button>
+          {loading && (
+            <tr>
+              <td colSpan={5} className="text-center py-8">
+                <div className="flex justify-center items-center">
+                  <MoonLoader color="#000" />
+                </div>
               </td>
             </tr>
-          ))}
+          )}
+          {!reports.length && !loading && (
+            <tr>
+              <td colSpan={5} className="text-center py-4">
+                No reports found
+              </td>
+            </tr>
+          )}
+          {reports &&
+            !loading &&
+            reports.map((report, index) => (
+              <tr key={index}>
+                <td className="px-4 py-2 border-r text-center border-gray-300">
+                  {index + 1}
+                </td>
+                <td className="px-4 py-2 border-r border-gray-300">
+                  {report.patient_name}
+                </td>
+                <td className="px-4 py-2 border-r border-gray-300">
+                  {report.metadata.reportingDate}
+                </td>
+                <td className="px-4 py-2 border-r border-gray-300">
+                  {report.metadata.collectionDate}
+                </td>
+                <td className="px-4 py-2">
+                  <button
+                    className="bg-black text-white p-2 px-4 rounded-lg"
+                    onClick={() => {
+                      localStorage.removeItem("metadata");
+                      localStorage.removeItem("data");
+                      localStorage.setItem(
+                        "metadata",
+                        JSON.stringify(report.metadata)
+                      );
+                      localStorage.setItem(
+                        "data",
+                        JSON.stringify({
+                          selectedTestTypes: report.data.selectedTestTypes,
+                          reportData: report.data.reportData,
+                        })
+                      );
+                      window.open("/#/report", "_blank");
+                    }}
+                  >
+                    View
+                  </button>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </>
