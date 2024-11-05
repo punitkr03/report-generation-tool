@@ -23,6 +23,11 @@ export default function Metadata({
     React.SetStateAction<{
       patientTitle: string;
       patientName: string;
+      age: string;
+      collectionDate: string;
+      reportingDate: string;
+      referral: string;
+      sampleID: string;
     }>
   >;
 }) {

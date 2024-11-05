@@ -24,15 +24,22 @@ import {
   SelectValue,
 } from "./ui/select";
 import { supabase } from "@/lib/supabase";
+import { BeatLoader } from "react-spinners";
 
 export default function TestSelection() {
   const [selectedTestTypes, setSelectedTestTypes] = useState<string[]>([]);
   const [reportData, setReportData] = useState({});
   const [ppdGivenDate, setPpdGivenDate] = useState<Date | undefined>(undefined);
   const [ppdReadDate, setPpdReadDate] = useState<Date | undefined>(undefined);
+  const [loading, setLoading] = useState(false);
   const [metadata, setMetadata] = useState({
     patientTitle: "Mr",
     patientName: "",
+    age: "",
+    collectionDate: "",
+    reportingDate: "",
+    referral: "",
+    sampleID: "",
   });
   return (
     <>
@@ -3321,8 +3328,24 @@ export default function TestSelection() {
       {selectedTestTypes.length > 0 && (
         <div className="flex w-full justify-center">
           <Button
-            className="bg-slate-700 text-white max-w-fit my-4"
+            disabled={loading}
+            className="bg-slate-700 text-white w-40 my-4"
             onClick={async () => {
+              if (
+                metadata.patientName === "" ||
+                metadata.age === "" ||
+                metadata.patientTitle === "" ||
+                metadata.collectionDate === "" ||
+                metadata.reportingDate === "" ||
+                metadata.collectionDate === "" ||
+                metadata.referral === "" ||
+                metadata.sampleID === ""
+              ) {
+                alert("Please fill in the patient details");
+                return;
+              }
+
+              setLoading(true);
               const { error } = await supabase.from("reportData").insert({
                 metadata: metadata,
                 data: {
@@ -3335,8 +3358,10 @@ export default function TestSelection() {
               if (error) {
                 console.log("DB error", error);
                 alert("Error saving data to database");
+                setLoading(false);
                 return;
               }
+              setLoading(false);
               localStorage.removeItem("metadata");
               localStorage.removeItem("data");
               localStorage.setItem("metadata", JSON.stringify(metadata));
@@ -3350,7 +3375,11 @@ export default function TestSelection() {
               window.open("/#/report", "_blank");
             }}
           >
-            Generate Report
+            {loading ? (
+              <BeatLoader size={6} color="#FFFFFF" />
+            ) : (
+              "Generate Report"
+            )}
           </Button>
         </div>
       )}
