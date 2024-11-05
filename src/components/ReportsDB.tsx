@@ -1,6 +1,8 @@
 import { supabase } from "@/lib/supabase";
 import React, { useEffect } from "react";
 import { MoonLoader } from "react-spinners";
+import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface ReportData {
   patient_name: string;
@@ -19,6 +21,7 @@ interface ReportData {
 export default function ReportsDB() {
   const [reports, setReports] = React.useState<ReportData[]>([]);
   const [loading, setLoading] = React.useState(true);
+  const navigate = useNavigate();
 
   async function getReports() {
     const { data, error } = await supabase
@@ -38,6 +41,9 @@ export default function ReportsDB() {
   }, []);
   return (
     <>
+      <Button className="absolute top-3 left-4" onClick={() => navigate("/")}>
+        Back
+      </Button>
       <div className="flex gap-2 items-center w-full bg-slate-700 text-white p-4 justify-center">
         <p className="font-semibold text-xl text-center">Report Database</p>
       </div>
