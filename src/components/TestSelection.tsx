@@ -23,6 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
+import { supabase } from "@/lib/supabase";
 
 export default function TestSelection() {
   const [selectedTestTypes, setSelectedTestTypes] = useState<string[]>([]);
@@ -31,6 +32,7 @@ export default function TestSelection() {
   const [ppdReadDate, setPpdReadDate] = useState<Date | undefined>(undefined);
   const [metadata, setMetadata] = useState({
     patientTitle: "Mr",
+    patientName: "",
   });
   return (
     <>
@@ -3320,7 +3322,21 @@ export default function TestSelection() {
         <div className="flex w-full justify-center">
           <Button
             className="bg-slate-700 text-white max-w-fit my-4"
-            onClick={() => {
+            onClick={async () => {
+              const { error } = await supabase.from("reportData").insert({
+                metadata: metadata,
+                data: {
+                  selectedTestTypes: selectedTestTypes,
+                  reportData: reportData,
+                },
+                patient_name: metadata.patientName,
+              });
+
+              if (error) {
+                console.log("DB error", error);
+                alert("Error saving data to database");
+                return;
+              }
               localStorage.removeItem("metadata");
               localStorage.removeItem("data");
               localStorage.setItem("metadata", JSON.stringify(metadata));

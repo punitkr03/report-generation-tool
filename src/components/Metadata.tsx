@@ -22,6 +22,7 @@ export default function Metadata({
   setMetadata: React.Dispatch<
     React.SetStateAction<{
       patientTitle: string;
+      patientName: string;
     }>
   >;
 }) {
