@@ -10161,6 +10161,16 @@ export default function Report() {
                     </View>
                   ))}
                 </View>
+                <Text
+                  style={{
+                    fontSize: 9,
+                    fontWeight: 600,
+                    marginBottom: 5,
+                    textDecoration: "underline",
+                  }}
+                >
+                  Method: Screening by slide agglutination
+                </Text>
               </View>
             )}
 
