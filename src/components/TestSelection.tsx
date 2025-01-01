@@ -1094,9 +1094,11 @@ export default function TestSelection() {
                   placeholder="Enter value"
                   className="w-40"
                   value={
-                    reportData.lipid_profile.vldl_cholesterol
-                      ? reportData.lipid_profile.vldl_cholesterol
-                      : 0
+                    (
+                      reportData as {
+                        lipid_profile: { vldl_cholesterol: number };
+                      }
+                    ).lipid_profile.vldl_cholesterol || 0
                   }
                   disabled
                 />
