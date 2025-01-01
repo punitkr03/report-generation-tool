@@ -3040,321 +3040,337 @@ export default function Report() {
                     </View>
                   </View>
                 </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                {reportData.differential_count.neutrophils && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Neutrophils
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.differential_count.neutrophils}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          `${referenceValues.differential_count.neutrophils.value}`
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.differential_count.neutrophils.unit
-                        }
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Neutrophils
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            reportData.differential_count.neutrophils
+                          }
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            `${referenceValues.differential_count.neutrophils.value}`
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.differential_count.neutrophils.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.differential_count.lymphocytes && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Lymphocytes
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.differential_count.lymphocytes}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          `${referenceValues.differential_count.lymphocytes.value}`
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.differential_count.lymphocytes.unit
-                        }
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Lymphocytes
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            reportData.differential_count.lymphocytes
+                          }
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            `${referenceValues.differential_count.lymphocytes.value}`
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.differential_count.lymphocytes.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.differential_count.monocytes && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Monocytes
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.differential_count.monocytes}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          `${referenceValues.differential_count.monocytes.value}`
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.differential_count.monocytes.unit
-                        }
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Monocytes
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.differential_count.monocytes}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            `${referenceValues.differential_count.monocytes.value}`
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.differential_count.monocytes.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.differential_count.eosinophils && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Eosinophils
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.differential_count.eosinophils}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          `${referenceValues.differential_count.eosinophils.value}`
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.differential_count.eosinophils.unit
-                        }
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Eosinophils
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            reportData.differential_count.eosinophils
+                          }
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            `${referenceValues.differential_count.eosinophils.value}`
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.differential_count.eosinophils.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.differential_count.basophils && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Basophils
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.differential_count.basophils}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          `${referenceValues.differential_count.basophils.value}`
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.differential_count.basophils.unit
-                        }
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Basophils
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.differential_count.basophils}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            `${referenceValues.differential_count.basophils.value}`
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.differential_count.basophils.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
+                )}
               </View>
             )}
 
