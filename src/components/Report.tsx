@@ -232,7 +232,7 @@ export default function Report() {
               >
                 <Text
                   style={{ fontSize: 10 }}
-                  render={() => `Referral            :- ${metadata.referral}`}
+                  render={() => `Referral             :- ${metadata.referral}`}
                 >
                   Referral :- Dr. M O
                 </Text>
@@ -243,7 +243,7 @@ export default function Report() {
                     fontSize: 10,
                     paddingLeft: 140,
                   }}
-                  render={() => `Sample ID          :- ${metadata.sampleID}`}
+                  render={() => `Sample ID           :- ${metadata.sampleID}`}
                 >
                   Sample ID :-
                 </Text>
@@ -279,7 +279,7 @@ export default function Report() {
                     paddingVertical: 3,
                     paddingLeft: 3,
                     textAlign: "center",
-                    transform: "translate(15px, 0)",
+                    transform: "translate(11px, 0)",
                   }}
                 >
                   <Text style={{ fontSize: 10, fontWeight: 700 }}>RESULT</Text>
@@ -289,6 +289,7 @@ export default function Report() {
                     paddingVertical: 3,
                     paddingLeft: 3,
                     textAlign: "left",
+                    transform: "translate(5px, 0)",
                   }}
                 >
                   <Text style={{ fontSize: 10, fontWeight: 700 }}>
@@ -377,7 +378,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -486,7 +487,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -543,7 +544,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -600,7 +601,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -703,7 +704,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -762,7 +763,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -862,7 +863,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -928,7 +929,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -1031,7 +1032,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -1135,7 +1136,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -1183,7 +1184,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -1274,7 +1275,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -1370,7 +1371,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -1467,7 +1468,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -1530,7 +1531,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -1594,7 +1595,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -1655,7 +1656,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -1748,7 +1749,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -1814,7 +1815,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -1880,7 +1881,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -1946,7 +1947,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -2012,7 +2013,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -2117,7 +2118,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -2180,7 +2181,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -2243,7 +2244,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -2304,7 +2305,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -2365,7 +2366,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -2426,7 +2427,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -2487,7 +2488,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -2590,7 +2591,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -2700,7 +2701,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -2796,7 +2797,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -2859,7 +2860,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -2922,7 +2923,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -2985,7 +2986,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3048,7 +3049,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3152,7 +3153,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3209,7 +3210,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3266,7 +3267,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3370,7 +3371,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3472,7 +3473,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3576,7 +3577,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3670,7 +3671,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3723,7 +3724,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3778,7 +3779,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3878,7 +3879,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3938,7 +3939,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -3996,7 +3997,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4054,7 +4055,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4112,7 +4113,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4216,7 +4217,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4275,7 +4276,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4336,7 +4337,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4399,7 +4400,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4458,7 +4459,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4517,7 +4518,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4580,7 +4581,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4639,7 +4640,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4698,7 +4699,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4757,7 +4758,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4854,7 +4855,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -4948,7 +4949,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5003,7 +5004,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5099,7 +5100,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5157,7 +5158,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5215,7 +5216,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5270,7 +5271,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5323,7 +5324,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5377,7 +5378,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5476,7 +5477,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5576,7 +5577,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5680,7 +5681,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5739,7 +5740,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5792,7 +5793,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5882,7 +5883,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -5988,7 +5989,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6075,7 +6076,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6128,7 +6129,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6181,7 +6182,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6266,7 +6267,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6325,7 +6326,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6381,7 +6382,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6437,7 +6438,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6493,7 +6494,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6549,7 +6550,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6605,7 +6606,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6661,7 +6662,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6781,7 +6782,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6834,7 +6835,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6887,7 +6888,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -6940,7 +6941,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -7035,7 +7036,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -7134,7 +7135,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -7233,7 +7234,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -7333,7 +7334,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -7433,7 +7434,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -7533,7 +7534,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -7653,7 +7654,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -7706,7 +7707,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -7759,7 +7760,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -7844,7 +7845,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -7897,7 +7898,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -7951,7 +7952,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -8008,7 +8009,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -8065,7 +8066,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -8121,7 +8122,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -8218,7 +8219,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -8322,7 +8323,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -8422,7 +8423,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -8526,7 +8527,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -8579,7 +8580,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -8632,7 +8633,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -8851,7 +8852,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -8904,7 +8905,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -8957,7 +8958,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9010,7 +9011,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9095,7 +9096,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9151,7 +9152,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9207,7 +9208,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9263,7 +9264,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9351,7 +9352,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9410,7 +9411,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9469,7 +9470,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9525,7 +9526,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9581,7 +9582,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9637,7 +9638,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
@@ -9732,7 +9733,7 @@ export default function Report() {
                     </View>
                     <View
                       style={{
-                        width: "20%",
+                        width: "22%",
                         padding: 2,
                         textAlign: "left",
                         marginRight: 10,
@@ -9834,7 +9835,7 @@ export default function Report() {
                       </View>
                       <View
                         style={{
-                          width: "20%",
+                          width: "22%",
                           padding: 2,
                           textAlign: "left",
                           marginRight: 10,
