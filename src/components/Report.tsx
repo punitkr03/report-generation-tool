@@ -2051,6 +2051,274 @@ export default function Report() {
                       </View>
                     </View>
                   </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          PCV (Packed Cell Volume)
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.cbc.differential_count.pcv}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            `${referenceValues.cbc.differential_count.pcv.value}`
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.cbc.differential_count.pcv.unit
+                          }
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          MCV (Mean Corp. Volume)
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => {
+                            const value =
+                              (parseInt(reportData.cbc.differential_count.pcv) *
+                                10) /
+                              parseInt(reportData.cbc.rbc_count);
+                            return value.toFixed(2);
+                          }}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            `${referenceValues.cbc.differential_count.mcv.value}`
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.cbc.differential_count.mcv.unit
+                          }
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          MCHC (Mean Corp. Hb Con.)
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => {
+                            const value =
+                              parseInt(reportData.cbc.haemoglobin) /
+                              (parseInt(reportData.cbc.rbc_count) * 100);
+                            return value.toFixed(2);
+                          }}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            `${referenceValues.cbc.differential_count.mchc.value}`
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.cbc.differential_count.mchc.unit
+                          }
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      width: "97%",
+                    }}
+                  >
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          MCH (Mean Corp. Haemoglobin)
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => {
+                            const value =
+                              parseInt(reportData.cbc.haemoglobin) /
+                              (parseInt(reportData.cbc.rbc_count) * 10);
+                            return value.toFixed(2);
+                          }}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            `${referenceValues.cbc.differential_count.mch.value}`
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.cbc.differential_count.mch.unit
+                          }
+                        ></Text>
+                      </View>
+                    </View>
+                  </View>
                 </View>
               </>
             )}

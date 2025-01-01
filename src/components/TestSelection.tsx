@@ -566,24 +566,6 @@ export default function TestSelection() {
                     });
                   }}
                 />
-                <p className="my-auto">MCV (Mean Corp. Volume)</p>
-                <Input
-                  type="number"
-                  placeholder="Enter value"
-                  className="w-40"
-                />
-                <p className="my-auto">MCHC (Mean Corp. Hb Con.)</p>
-                <Input
-                  type="number"
-                  placeholder="Enter value"
-                  className="w-40"
-                />
-                <p className="my-auto">MCH (Mean Corp. Haemoglobin)</p>
-                <Input
-                  type="number"
-                  placeholder="Enter value"
-                  className="w-40"
-                />
               </div>
             </div>
           </div>
