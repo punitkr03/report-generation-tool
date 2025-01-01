@@ -609,7 +609,10 @@ export default function Report() {
                     >
                       <Text
                         style={{ fontSize: 10 }}
-                        render={() => reportData.bilirubin.indirect_bilirubin}
+                        render={() =>
+                          reportData.bilirubin.total_bilirubin -
+                          reportData.bilirubin.direct_bilirubin
+                        }
                       ></Text>
                     </View>
                     <View
@@ -4331,7 +4334,11 @@ export default function Report() {
                     >
                       <Text
                         style={{ fontSize: 10 }}
-                        render={() => reportData.lipid_profile.ldl_cholesterol}
+                        render={() =>
+                          reportData.lipid_profile.total_cholesterol -
+                          reportData.lipid_profile.hdl_cholesterol -
+                          reportData.lipid_profile.vldl_cholesterol
+                        }
                       ></Text>
                     </View>
                     <View
@@ -4613,7 +4620,10 @@ export default function Report() {
                     >
                       <Text
                         style={{ fontSize: 10 }}
-                        render={() => reportData.lft.indirect_bilirubin}
+                        render={() =>
+                          reportData.lft.total_bilirubin -
+                          reportData.lft.direct_bilirubin
+                        }
                       ></Text>
                     </View>
                     <View

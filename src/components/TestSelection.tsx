@@ -143,22 +143,6 @@ export default function TestSelection() {
                   });
                 }}
               />
-              <p className="my-auto">Indirect Bilirubin</p>
-              <Input
-                type="number"
-                placeholder="Enter value"
-                className="max-w-40"
-                onChange={(e) => {
-                  setReportData({
-                    ...reportData,
-                    bilirubin: {
-                      //@ts-expect-error - Sab changa-si
-                      ...reportData.bilirubin,
-                      indirect_bilirubin: e.target.value,
-                    },
-                  });
-                }}
-              />
             </div>
           </div>
         </div>
@@ -844,24 +828,6 @@ export default function TestSelection() {
                     });
                   }}
                 />
-                <p className="my-auto">MCV (Mean Corp. Volume)</p>
-                <Input
-                  type="number"
-                  placeholder="Enter value"
-                  className="w-40"
-                />
-                <p className="my-auto">MCHC (Mean Corp. Hb Con.)</p>
-                <Input
-                  type="number"
-                  placeholder="Enter value"
-                  className="w-40"
-                />
-                <p className="my-auto">MCH (Mean Corp. Haemoglobin)</p>
-                <Input
-                  type="number"
-                  placeholder="Enter value"
-                  className="w-40"
-                />
               </div>
             </div>
           </div>
@@ -1099,6 +1065,9 @@ export default function TestSelection() {
                         //@ts-expect-error - Sab changa-si
                         ...reportData.lipid_profile,
                         triglycerides: e.target.value,
+                        vldl_cholesterol: (
+                          parseInt(e.target.value) / 5
+                        ).toFixed(2),
                       },
                     });
                   }}
@@ -1119,37 +1088,17 @@ export default function TestSelection() {
                     });
                   }}
                 />
-                <p className="my-auto pr-4">LDL Cholesterol</p>
-                <Input
-                  type="number"
-                  placeholder="Enter value"
-                  className="w-40"
-                  onChange={(e) => {
-                    setReportData({
-                      ...reportData,
-                      lipid_profile: {
-                        //@ts-expect-error - Sab changa-si
-                        ...reportData.lipid_profile,
-                        ldl_cholesterol: e.target.value,
-                      },
-                    });
-                  }}
-                />
                 <p className="my-auto pr-4">VLDL Cholesterol</p>
                 <Input
                   type="number"
                   placeholder="Enter value"
                   className="w-40"
-                  onChange={(e) => {
-                    setReportData({
-                      ...reportData,
-                      lipid_profile: {
-                        //@ts-expect-error - Sab changa-si
-                        ...reportData.lipid_profile,
-                        vldl_cholesterol: e.target.value,
-                      },
-                    });
-                  }}
+                  value={
+                    reportData.lipid_profile.vldl_cholesterol
+                      ? reportData.lipid_profile.vldl_cholesterol
+                      : 0
+                  }
+                  disabled
                 />
               </div>
             </div>
@@ -1194,22 +1143,7 @@ export default function TestSelection() {
                     });
                   }}
                 />
-                <p className="my-auto pr-4">Indirect Bilirubin</p>
-                <Input
-                  type="number"
-                  placeholder="Enter value"
-                  className="w-40"
-                  onChange={(e) => {
-                    setReportData({
-                      ...reportData,
-                      lft: {
-                        //@ts-expect-error - Sab changa-si
-                        ...reportData.lft,
-                        indirect_bilirubin: e.target.value,
-                      },
-                    });
-                  }}
-                />
+
                 <p className="my-auto pr-4">ALT (SGPT)</p>
                 <Input
                   type="number"
