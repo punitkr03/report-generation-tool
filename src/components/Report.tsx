@@ -610,8 +610,10 @@ export default function Report() {
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
-                          reportData.bilirubin.total_bilirubin -
-                          reportData.bilirubin.direct_bilirubin
+                          (
+                            parseFloat(reportData.bilirubin.total_bilirubin) -
+                            parseFloat(reportData.bilirubin.direct_bilirubin)
+                          ).toFixed(1)
                         }
                       ></Text>
                     </View>
@@ -2155,9 +2157,11 @@ export default function Report() {
                           style={{ fontSize: 10 }}
                           render={() => {
                             const value =
-                              (parseInt(reportData.cbc.differential_count.pcv) *
+                              (parseFloat(
+                                reportData.cbc.differential_count.pcv
+                              ) *
                                 10) /
-                              parseInt(reportData.cbc.rbc_count);
+                              parseFloat(reportData.cbc.rbc_count);
                             return value.toFixed(2);
                           }}
                         ></Text>
@@ -2224,8 +2228,8 @@ export default function Report() {
                           style={{ fontSize: 10 }}
                           render={() => {
                             const value =
-                              parseInt(reportData.cbc.haemoglobin) /
-                              (parseInt(reportData.cbc.rbc_count) * 100);
+                              parseFloat(reportData.cbc.haemoglobin) /
+                              (parseFloat(reportData.cbc.rbc_count) * 100);
                             return value.toFixed(2);
                           }}
                         ></Text>
@@ -2292,8 +2296,8 @@ export default function Report() {
                           style={{ fontSize: 10 }}
                           render={() => {
                             const value =
-                              parseInt(reportData.cbc.haemoglobin) /
-                              (parseInt(reportData.cbc.rbc_count) * 10);
+                              parseFloat(reportData.cbc.haemoglobin) /
+                              (parseFloat(reportData.cbc.rbc_count) * 10);
                             return value.toFixed(2);
                           }}
                         ></Text>
@@ -4637,8 +4641,10 @@ export default function Report() {
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
-                          reportData.lft.total_bilirubin -
-                          reportData.lft.direct_bilirubin
+                          (
+                            parseFloat(reportData.lft.total_bilirubin) -
+                            parseFloat(reportData.lft.direct_bilirubin)
+                          ).toFixed(1)
                         }
                       ></Text>
                     </View>
