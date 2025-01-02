@@ -40,6 +40,7 @@ export default function TestSelection() {
     reportingDate: "",
     referral: "",
     sampleID: "",
+    gender: "",
   });
   return (
     <>
@@ -3257,7 +3258,8 @@ export default function TestSelection() {
                 metadata.reportingDate === "" ||
                 metadata.collectionDate === "" ||
                 metadata.referral === "" ||
-                metadata.sampleID === ""
+                metadata.sampleID === "" ||
+                metadata.gender === ""
               ) {
                 alert("Please fill in the patient details");
                 return;

@@ -28,6 +28,7 @@ export default function Metadata({
       reportingDate: string;
       referral: string;
       sampleID: string;
+      gender: string;
     }>
   >;
 }) {

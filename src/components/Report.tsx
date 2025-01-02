@@ -2365,437 +2365,451 @@ export default function Report() {
                       </View>
                     </View>
                   </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  {reportData.cbp.haemoglobin && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          Hemoglobin
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => reportData.cbp.haemoglobin}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() =>
-                            `Male : ${referenceValues.cbp.hemoglobin.male.value}\nFemale : ${referenceValues.cbp.hemoglobin.female.value}\nInfant : ${referenceValues.cbp.hemoglobin.infant.value}\nChildren : ${referenceValues.cbp.hemoglobin.children.value}`
-                          }
-                        ></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() =>
-                            referenceValues.cbp.hemoglobin.male.unit
-                          }
-                        ></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            Hemoglobin
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => reportData.cbp.haemoglobin}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              `Male : ${referenceValues.cbp.hemoglobin.male.value}\nFemale : ${referenceValues.cbp.hemoglobin.female.value}\nInfant : ${referenceValues.cbp.hemoglobin.infant.value}\nChildren : ${referenceValues.cbp.hemoglobin.children.value}`
+                            }
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              referenceValues.cbp.hemoglobin.male.unit
+                            }
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  )}
+                  {reportData.cbp.total_wbc_count && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          Total WBC count
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => reportData.cbp.total_wbc_count}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() =>
-                            `${referenceValues.cbp.total_wbc_count.value}`
-                          }
-                        ></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() =>
-                            referenceValues.cbp.total_wbc_count.unit
-                          }
-                        ></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            Total WBC count
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => reportData.cbp.total_wbc_count}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              `${referenceValues.cbp.total_wbc_count.value}`
+                            }
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              referenceValues.cbp.total_wbc_count.unit
+                            }
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  )}
+                  {reportData.cbp.neutrophils && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          Neutrophils
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => reportData.cbp.neutrophils}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() =>
-                            `${referenceValues.cbp.neutrophils.value}`
-                          }
-                        ></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => referenceValues.cbp.neutrophils.unit}
-                        ></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            Neutrophils
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => reportData.cbp.neutrophils}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              `${referenceValues.cbp.neutrophils.value}`
+                            }
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => referenceValues.cbp.neutrophils.unit}
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  )}
+                  {reportData.cbp.lymphocytes && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          Lymphocytes
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => reportData.cbp.lymphocytes}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() =>
-                            `${referenceValues.cbp.lymphocytes.value}`
-                          }
-                        ></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => referenceValues.cbp.lymphocytes.unit}
-                        ></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            Lymphocytes
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => reportData.cbp.lymphocytes}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              `${referenceValues.cbp.lymphocytes.value}`
+                            }
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => referenceValues.cbp.lymphocytes.unit}
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  )}
+                  {reportData.cbp.monocytes && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          Monocytes
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => reportData.cbp.monocytes}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() =>
-                            `${referenceValues.cbp.monocytes.value}`
-                          }
-                        ></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => referenceValues.cbp.monocytes.unit}
-                        ></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            Monocytes
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => reportData.cbp.monocytes}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              `${referenceValues.cbp.monocytes.value}`
+                            }
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => referenceValues.cbp.monocytes.unit}
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  )}
+                  {reportData.cbp.eosinophils && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          Eosinophils
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => reportData.cbp.eosinophils}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() =>
-                            `${referenceValues.cbp.eosinophils.value}`
-                          }
-                        ></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => referenceValues.cbp.eosinophils.unit}
-                        ></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            Eosinophils
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => reportData.cbp.eosinophils}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              `${referenceValues.cbp.eosinophils.value}`
+                            }
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => referenceValues.cbp.eosinophils.unit}
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  )}
+                  {reportData.cbp.basophils && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          Basophils
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => reportData.cbp.basophils}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() =>
-                            `${referenceValues.cbp.basophils.value}`
-                          }
-                        ></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => referenceValues.cbp.basophils.unit}
-                        ></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            Basophils
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => reportData.cbp.basophils}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              `${referenceValues.cbp.basophils.value}`
+                            }
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => referenceValues.cbp.basophils.unit}
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
+                  )}
                 </View>
               </>
             )}
