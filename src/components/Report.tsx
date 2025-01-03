@@ -3439,177 +3439,183 @@ export default function Report() {
                     width: "97%",
                   }}
                 >
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                    }}
-                  >
+                  {reportData.electrolytes.serum_sodium && (
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Serum Sodium
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.electrolytes.serum_sodium}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.electrolytes.serum_sodium.value
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.electrolytes.serum_sodium.unit
-                        }
-                      ></Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <View
-                      style={{
-                        width: "35%",
-                        paddingTop: 1,
-                      }}
-                    >
-                      <Text
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Serum Sodium
+                        </Text>
+                      </View>
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
                         }}
                       >
-                        Serum Potassium
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.electrolytes.serum_potassium}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.electrolytes.serum_potassium.value
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.electrolytes.serum_potassium.unit
-                        }
-                      ></Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <View
-                      style={{
-                        width: "35%",
-                        paddingTop: 1,
-                      }}
-                    >
-                      <Text
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.electrolytes.serum_sodium}
+                        ></Text>
+                      </View>
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
                         }}
                       >
-                        Serum Chloride
-                      </Text>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.electrolytes.serum_sodium.value
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.electrolytes.serum_sodium.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
+                  )}
+                  {reportData.electrolytes.serum_potassium && (
                     <View
                       style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.electrolytes.serum_chloride}
-                      ></Text>
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Serum Potassium
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.electrolytes.serum_potassium}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.electrolytes.serum_potassium.value
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.electrolytes.serum_potassium.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
+                  )}
+                  {reportData.electrolytes.serum_chloride && (
                     <View
                       style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.electrolytes.serum_chloride.value
-                        }
-                      ></Text>
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Serum Chloride
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.electrolytes.serum_chloride}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.electrolytes.serum_chloride.value
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.electrolytes.serum_chloride.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.electrolytes.serum_chloride.unit
-                        }
-                      ></Text>
-                    </View>
-                  </View>
+                  )}
                 </View>
               </View>
             )}
@@ -3957,167 +3963,175 @@ export default function Report() {
                     width: "97%",
                   }}
                 >
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                    }}
-                  >
+                  {reportData.kft.blood_urea && (
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Blood urea
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.kft.blood_urea}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.kft.blood_urea.value}
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.kft.blood_urea.unit}
-                      ></Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <View
-                      style={{
-                        width: "35%",
-                        paddingTop: 1,
-                      }}
-                    >
-                      <Text
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Blood urea
+                        </Text>
+                      </View>
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
                         }}
                       >
-                        Creatinine Serum
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.kft.creatinine_serum}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.kft.creatinine_serum.value
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.kft.creatinine_serum.unit}
-                      ></Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <View
-                      style={{
-                        width: "35%",
-                        paddingTop: 1,
-                      }}
-                    >
-                      <Text
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.kft.blood_urea}
+                        ></Text>
+                      </View>
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
                         }}
                       >
-                        Uric Acid
-                      </Text>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.kft.blood_urea.value}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.kft.blood_urea.unit}
+                        ></Text>
+                      </View>
                     </View>
+                  )}
+                  {reportData.kft.creatinine_serum && (
                     <View
                       style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.kft.uric_acid}
-                      ></Text>
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Creatinine Serum
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.kft.creatinine_serum}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.kft.creatinine_serum.value
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.kft.creatinine_serum.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
+                  )}
+                  {reportData.kft.uric_acid && (
                     <View
                       style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.kft.uric_acid.value}
-                      ></Text>
+                      <View
+                        style={{
+                          width: "35%",
+                          paddingTop: 1,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Uric Acid
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.kft.uric_acid}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.kft.uric_acid.value}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.kft.uric_acid.unit}
+                        ></Text>
+                      </View>
                     </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.kft.uric_acid.unit}
-                      ></Text>
-                    </View>
-                  </View>
+                  )}
                 </View>
               </View>
             )}

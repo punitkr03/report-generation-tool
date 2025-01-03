@@ -1095,11 +1095,19 @@ export default function TestSelection() {
                   placeholder="Enter value"
                   className="w-40"
                   value={
+                    //@ts-expect-error - Sab changa-si
+                    reportData.lipid_profile &&
                     (
                       reportData as {
                         lipid_profile: { vldl_cholesterol: number };
                       }
-                    ).lipid_profile.vldl_cholesterol || 0
+                    ).lipid_profile.vldl_cholesterol
+                      ? (
+                          reportData as {
+                            lipid_profile: { vldl_cholesterol: number };
+                          }
+                        ).lipid_profile.vldl_cholesterol
+                      : 0
                   }
                   disabled
                 />
