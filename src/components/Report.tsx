@@ -2228,8 +2228,11 @@ export default function Report() {
                           style={{ fontSize: 10 }}
                           render={() => {
                             const value =
-                              parseFloat(reportData.cbc.haemoglobin) /
-                              (parseFloat(reportData.cbc.rbc_count) * 100);
+                              (parseFloat(reportData.cbc.haemoglobin) /
+                                parseFloat(
+                                  reportData.cbc.differential_count.pcv
+                                )) *
+                              100;
                             return value.toFixed(2);
                           }}
                         ></Text>
@@ -2296,8 +2299,9 @@ export default function Report() {
                           style={{ fontSize: 10 }}
                           render={() => {
                             const value =
-                              parseFloat(reportData.cbc.haemoglobin) /
-                              (parseFloat(reportData.cbc.rbc_count) * 10);
+                              (parseFloat(reportData.cbc.haemoglobin) /
+                                parseFloat(reportData.cbc.rbc_count)) *
+                              10;
                             return value.toFixed(2);
                           }}
                         ></Text>
