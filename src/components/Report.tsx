@@ -4502,608 +4502,635 @@ export default function Report() {
                     </View>
                   </View>
                 </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                {reportData.lft.total_bilirubin && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Total Bilirubin
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.lft.total_bilirubin}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.total_bilirubin.value}
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.total_bilirubin.unit}
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Total Bilirubin
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.lft.total_bilirubin}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.lft.total_bilirubin.value
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.lft.total_bilirubin.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.lft.direct_bilirubin && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Direct Bilirubin
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.lft.direct_bilirubin}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.lft.direct_bilirubin.value
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.direct_bilirubin.unit}
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Direct Bilirubin
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.lft.direct_bilirubin}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.lft.direct_bilirubin.value
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.lft.direct_bilirubin.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.lft.total_bilirubin &&
+                  reportData.lft.direct_bilirubin && (
+                    <View
+                      style={{
+                        width: "97%",
+                      }}
+                    >
+                      <View
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <View
+                          style={{
+                            width: "35%",
+                            paddingTop: 1,
+                          }}
+                        >
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            Indirect Bilirubin
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              (
+                                parseFloat(reportData.lft.total_bilirubin) -
+                                parseFloat(reportData.lft.direct_bilirubin)
+                              ).toFixed(1)
+                            }
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              referenceValues.lft.indirect_bilirubin.value
+                            }
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              referenceValues.lft.indirect_bilirubin.unit
+                            }
+                          ></Text>
+                        </View>
+                      </View>
+                    </View>
+                  )}
+                {reportData.lft.alt_sgpt && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Indirect Bilirubin
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          (
-                            parseFloat(reportData.lft.total_bilirubin) -
-                            parseFloat(reportData.lft.direct_bilirubin)
-                          ).toFixed(1)
-                        }
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.lft.indirect_bilirubin.value
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.lft.indirect_bilirubin.unit
-                        }
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          ALT (SGPT)
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.lft.alt_sgpt}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.alt_sgpt.value}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.alt_sgpt.unit}
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.lft.ast_sgot && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        ALT (SGPT)
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.lft.alt_sgpt}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.alt_sgpt.value}
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.alt_sgpt.unit}
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          AST (SGOT)
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.lft.ast_sgot}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.ast_sgot.value}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.ast_sgot.unit}
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.lft.alkaline_phosphatase && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        AST (SGOT)
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.lft.ast_sgot}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.ast_sgot.value}
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.ast_sgot.unit}
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Alkaline Phosphatase
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.lft.alkaline_phosphatase}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.lft.alkaline_phosphatase.value
+                          }
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() =>
+                            referenceValues.lft.alkaline_phosphatase.unit
+                          }
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.lft.total_protein && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Alkaline Phosphatase
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.lft.alkaline_phosphatase}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.lft.alkaline_phosphatase.value
-                        }
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() =>
-                          referenceValues.lft.alkaline_phosphatase.unit
-                        }
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Total Protein
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.lft.total_protein}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.total_protein.value}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.total_protein.unit}
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.lft.albumin && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Total Protein
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.lft.total_protein}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.total_protein.value}
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.total_protein.unit}
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Albumin
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.lft.albumin}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.albumin.value}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.albumin.unit}
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.lft.globulin && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Albumin
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.lft.albumin}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.albumin.value}
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.albumin.unit}
-                      ></Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          Globulin
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.lft.globulin}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.globulin.value}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.globulin.unit}
+                        ></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
+                )}
+                {reportData.lft.a_g_ratio && (
                   <View
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
+                      width: "97%",
                     }}
                   >
                     <View
                       style={{
-                        width: "35%",
-                        paddingTop: 1,
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Text
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "35%",
+                          paddingTop: 1,
                         }}
                       >
-                        Globulin
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.lft.globulin}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.globulin.value}
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.globulin.unit}
-                      ></Text>
-                    </View>
-                  </View>
-                </View>
-                <View
-                  style={{
-                    width: "97%",
-                  }}
-                >
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <View
-                      style={{
-                        width: "35%",
-                        paddingTop: 1,
-                      }}
-                    >
-                      <Text
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          A/G Ratio
+                        </Text>
+                      </View>
+                      <View
                         style={{
-                          fontSize: 10,
+                          width: "22%",
+                          padding: 2,
+                          textAlign: "left",
+                          marginRight: 10,
                         }}
                       >
-                        A/G Ratio
-                      </Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "22%",
-                        padding: 2,
-                        textAlign: "left",
-                        marginRight: 10,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => reportData.lft.a_g_ratio}
-                      ></Text>
-                    </View>
-                    <View
-                      style={{
-                        width: "35%",
-                        padding: 2,
-                        textAlign: "left",
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 10 }}
-                        render={() => referenceValues.lft.a_g_ratio.value}
-                      ></Text>
-                    </View>
-                    <View style={{ width: "15%", padding: 2 }}>
-                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => reportData.lft.a_g_ratio}
+                        ></Text>
+                      </View>
+                      <View
+                        style={{
+                          width: "35%",
+                          padding: 2,
+                          textAlign: "left",
+                        }}
+                      >
+                        <Text
+                          style={{ fontSize: 10 }}
+                          render={() => referenceValues.lft.a_g_ratio.value}
+                        ></Text>
+                      </View>
+                      <View style={{ width: "15%", padding: 2 }}>
+                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                      </View>
                     </View>
                   </View>
-                </View>
+                )}
               </View>
             )}
 
