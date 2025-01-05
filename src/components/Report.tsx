@@ -891,7 +891,7 @@ export default function Report() {
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
-                          `Normal : ${referenceValues.blood_glucose.fasting_plasma_glucose.normal.value}\nImapred GT : ${referenceValues.blood_glucose.fasting_plasma_glucose.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.blood_glucose.fasting_plasma_glucose.diabetic.value}`
+                          `Normal : ${referenceValues.blood_glucose.fasting_plasma_glucose.normal.value}\nImpaired GT : ${referenceValues.blood_glucose.fasting_plasma_glucose.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.blood_glucose.fasting_plasma_glucose.diabetic.value}`
                         }
                       ></Text>
                     </View>
@@ -957,7 +957,7 @@ export default function Report() {
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
-                          `Normal : ${referenceValues.blood_glucose.post_prandial_blood_sugar.normal.value}\nImapred GT : ${referenceValues.blood_glucose.post_prandial_blood_sugar.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.blood_glucose.post_prandial_blood_sugar.diabetic.value}`
+                          `Normal : ${referenceValues.blood_glucose.post_prandial_blood_sugar.normal.value}\nImpaired GT : ${referenceValues.blood_glucose.post_prandial_blood_sugar.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.blood_glucose.post_prandial_blood_sugar.diabetic.value}`
                         }
                       ></Text>
                     </View>
@@ -3809,7 +3809,7 @@ export default function Report() {
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
-                          `Normal : ${referenceValues.fasting_plasma_glucose.normal.value}\nImapred GT : ${referenceValues.fasting_plasma_glucose.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.fasting_plasma_glucose.diabetic.value}`
+                          `Normal : ${referenceValues.fasting_plasma_glucose.normal.value}\nImpaired GT : ${referenceValues.fasting_plasma_glucose.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.fasting_plasma_glucose.diabetic.value}`
                         }
                       ></Text>
                     </View>
@@ -5957,7 +5957,7 @@ export default function Report() {
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
-                          `Normal : ${referenceValues.blood_glucose.post_prandial_blood_sugar.normal.value}\nImapred GT : ${referenceValues.blood_glucose.post_prandial_blood_sugar.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.blood_glucose.post_prandial_blood_sugar.diabetic.value}`
+                          `Normal : ${referenceValues.blood_glucose.post_prandial_blood_sugar.normal.value}\nImpaired GT : ${referenceValues.blood_glucose.post_prandial_blood_sugar.impaired_glucose_tolerance.value}\nDiabetic : ${referenceValues.blood_glucose.post_prandial_blood_sugar.diabetic.value}`
                         }
                       ></Text>
                     </View>
