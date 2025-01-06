@@ -10059,7 +10059,7 @@ export default function Report() {
                           textDecoration: "underline",
                         }}
                       >
-                        Anti Streptolysin O (ASO)
+                        Uric Acid
                       </Text>
                     </View>
                   </View>
