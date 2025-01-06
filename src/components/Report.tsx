@@ -10087,7 +10087,7 @@ export default function Report() {
                           fontSize: 10,
                         }}
                       >
-                        ASO titre
+                        Uric Acid
                       </Text>
                     </View>
                     <View
