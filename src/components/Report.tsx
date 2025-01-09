@@ -2143,7 +2143,7 @@ export default function Report() {
                         </View>
                       </View>
                     )}
-                    {reportData.cbc.differential_count.mcv && (
+                    {reportData.cbc.differential_count.pcv && (
                       <View
                         style={{
                           width: "97%",
@@ -2216,7 +2216,7 @@ export default function Report() {
                         </View>
                       </View>
                     )}
-                    {reportData.cbc.differential_count.mchc && (
+                    {reportData.cbc.differential_count.pcv && (
                       <View
                         style={{
                           width: "97%",
@@ -2289,7 +2289,7 @@ export default function Report() {
                         </View>
                       </View>
                     )}
-                    {reportData.cbc.differential_count.mch && (
+                    {reportData.cbc.differential_count.pcv && (
                       <View
                         style={{
                           width: "97%",
