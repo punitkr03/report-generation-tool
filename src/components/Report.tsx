@@ -4424,9 +4424,11 @@ export default function Report() {
                       <Text
                         style={{ fontSize: 10 }}
                         render={() =>
-                          reportData.lipid_profile.total_cholesterol -
-                          reportData.lipid_profile.hdl_cholesterol -
-                          reportData.lipid_profile.vldl_cholesterol
+                          (
+                            reportData.lipid_profile.total_cholesterol -
+                            reportData.lipid_profile.hdl_cholesterol -
+                            reportData.lipid_profile.vldl_cholesterol
+                          ).toFixed(2)
                         }
                       ></Text>
                     </View>
