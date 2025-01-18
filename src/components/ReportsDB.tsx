@@ -1,5 +1,5 @@
 import { supabase } from "@/lib/supabase";
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { MoonLoader } from "react-spinners";
 import { Button } from "./ui/button";
 import { useNavigate } from "react-router-dom";
@@ -23,37 +23,76 @@ export default function ReportsDB() {
   const [reports, setReports] = React.useState<ReportData[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [query, setQuery] = React.useState("");
+  const [page, setPage] = React.useState(0);
+  const [searchPage, setSearchPage] = React.useState(0);
+  const [totalRecords, setTotalRecords] = React.useState(0);
   const navigate = useNavigate();
 
-  async function getReports() {
+  const getReports = useCallback(async () => {
+    setLoading(true);
     const { data, error } = await supabase
       .from("reportData")
       .select("*")
-      .order("created_at", { ascending: false });
+      .order("created_at", { ascending: false })
+      .range(page * 30, (page + 1) * 30 - 1);
     if (error) {
       console.error(error);
       setLoading(false);
     }
     setReports(data as ReportData[]);
     setLoading(false);
-  }
+  }, [page]);
 
-  async function searchResults() {
-    const { data, error } = await supabase
-      .from("reportData")
-      .select("*")
-      .like("patient_name", `%${query}%`);
+  const searchResults = useCallback(
+    async ({ searchPage, query }: { searchPage: number; query: string }) => {
+      console.log(query);
+      setLoading(true);
+      console.log(searchPage);
+      const { data, error, count } = await supabase
+        .from("reportData")
+        .select("*", { count: "exact" })
+        .like("patient_name", `%${query}%`)
+        .range(searchPage * 30, (searchPage + 1) * 30 - 1);
+
+      if (error) {
+        console.error(error);
+        setLoading(false);
+      }
+      if (!count || count === 0) {
+        setTotalRecords(0);
+      } else {
+        setTotalRecords(count);
+      }
+      setReports(data as ReportData[]);
+      setLoading(false);
+    },
+    []
+  );
+
+  const getReportsLength = useCallback(async () => {
+    const { count, error } = await supabase.from("reportData").select("*", {
+      count: "exact",
+      head: true,
+    });
     if (error) {
       console.error(error);
       setLoading(false);
     }
-    setReports(data as ReportData[]);
-    setLoading(false);
-  }
+    if (!count || count === 0) {
+      setTotalRecords(0);
+    } else {
+      setTotalRecords(count);
+    }
+  }, []);
 
   useEffect(() => {
     getReports();
-  }, []);
+  }, [getReports]);
+
+  useEffect(() => {
+    getReportsLength();
+  }, [getReportsLength]);
+
   return (
     <>
       <Button className="absolute top-3 left-4" onClick={() => navigate("/")}>
@@ -68,13 +107,16 @@ export default function ReportsDB() {
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
-              searchResults();
+              setSearchPage(0);
+              searchResults({ searchPage: 0, query });
             }
           }}
         />
         <Button
           onClick={() => {
-            searchResults();
+            setSearchPage(0);
+            console.log(searchPage, Math.floor(totalRecords / 30) - 1);
+            searchResults({ searchPage: 0, query });
           }}
         >
           Search
@@ -119,7 +161,9 @@ export default function ReportsDB() {
               reports.map((report, index) => (
                 <tr key={index}>
                   <td className="px-4 py-2 border-r text-center border-gray-300">
-                    {index + 1}
+                    {query === ""
+                      ? page * 30 + (index + 1)
+                      : searchPage * 30 + (index + 1)}
                   </td>
                   <td className="px-4 py-2 border-r border-gray-300">
                     {report.patient_name}
@@ -158,6 +202,71 @@ export default function ReportsDB() {
           </tbody>
         </table>
       </div>
+
+      {query === "" && (
+        <div className="py-10 w-full flex justify-center items-center gap-5">
+          <Button
+            variant="outline"
+            onClick={() => {
+              if (searchPage !== 0) {
+                setPage(0);
+              }
+              setPage((prev) => prev - 1);
+            }}
+            disabled={page <= 0}
+          >
+            Prev Page
+          </Button>
+          <p>
+            Page {page + 1} of {totalRecords ? Math.ceil(totalRecords / 30) : 0}
+          </p>
+          <Button
+            onClick={() => {
+              if (searchPage !== 0) {
+                setPage(0);
+              }
+              setPage((prev) => prev + 1);
+            }}
+            disabled={page + 1 === Math.ceil(totalRecords / 30)}
+          >
+            Next Page
+          </Button>
+        </div>
+      )}
+
+      {query !== "" && (
+        <div className="py-10 w-full flex justify-center items-center gap-5">
+          <Button
+            variant="outline"
+            onClick={() => {
+              if (page !== 0) {
+                setPage(0);
+              }
+              setSearchPage((prev) => prev - 1);
+              searchResults({ searchPage: searchPage - 1, query });
+            }}
+            disabled={searchPage <= 0}
+          >
+            Prev Page
+          </Button>
+          <p>
+            Page {searchPage + 1} of{" "}
+            {totalRecords ? Math.ceil(totalRecords / 30) : 0}
+          </p>
+          <Button
+            onClick={() => {
+              if (page !== 0) {
+                setPage(0);
+              }
+              setSearchPage((prev) => prev + 1);
+              searchResults({ searchPage: searchPage + 1, query });
+            }}
+            disabled={searchPage + 1 === Math.ceil(totalRecords / 30)}
+          >
+            Next Page
+          </Button>
+        </div>
+      )}
     </>
   );
 }
