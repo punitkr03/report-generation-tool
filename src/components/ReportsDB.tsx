@@ -45,9 +45,7 @@ export default function ReportsDB() {
 
   const searchResults = useCallback(
     async ({ searchPage, query }: { searchPage: number; query: string }) => {
-      console.log(query);
       setLoading(true);
-      console.log(searchPage);
       const { data, error, count } = await supabase
         .from("reportData")
         .select("*", { count: "exact" })
@@ -115,7 +113,6 @@ export default function ReportsDB() {
         <Button
           onClick={() => {
             setSearchPage(0);
-            console.log(searchPage, Math.floor(totalRecords / 30) - 1);
             searchResults({ searchPage: 0, query });
           }}
         >
