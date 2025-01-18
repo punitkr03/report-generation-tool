@@ -210,7 +210,7 @@ export default function ReportsDB() {
               }
               setPage((prev) => prev - 1);
             }}
-            disabled={page <= 0}
+            disabled={loading || page <= 0}
           >
             Prev Page
           </Button>
@@ -224,7 +224,7 @@ export default function ReportsDB() {
               }
               setPage((prev) => prev + 1);
             }}
-            disabled={page + 1 === Math.ceil(totalRecords / 30)}
+            disabled={loading || page + 1 === Math.ceil(totalRecords / 30)}
           >
             Next Page
           </Button>
@@ -242,7 +242,7 @@ export default function ReportsDB() {
               setSearchPage((prev) => prev - 1);
               searchResults({ searchPage: searchPage - 1, query });
             }}
-            disabled={searchPage <= 0}
+            disabled={loading || searchPage <= 0}
           >
             Prev Page
           </Button>
@@ -258,7 +258,9 @@ export default function ReportsDB() {
               setSearchPage((prev) => prev + 1);
               searchResults({ searchPage: searchPage + 1, query });
             }}
-            disabled={searchPage + 1 === Math.ceil(totalRecords / 30)}
+            disabled={
+              loading || searchPage + 1 === Math.ceil(totalRecords / 30)
+            }
           >
             Next Page
           </Button>
