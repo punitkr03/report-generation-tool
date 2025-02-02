@@ -7152,218 +7152,250 @@ export default function Report() {
                       </View>
                     </View>
                   </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  {reportData.serology.hiv && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          HIV (1&2)
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10, textTransform: "uppercase" }}
-                          render={() => reportData.serology.hiv}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            HIV (1&2)
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10, textTransform: "uppercase" }}
+                            render={() => reportData.serology.hiv}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => ``}
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => ""}
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  )}
+                  {reportData.serology.hbsag && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          HbsAg
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10, textTransform: "uppercase" }}
-                          render={() => reportData.serology.hbsag}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            HbsAg
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10, textTransform: "uppercase" }}
+                            render={() => reportData.serology.hbsag}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => ``}
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => ""}
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  )}
+                  {reportData.serology.vdrl && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          VDRL
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10, textTransform: "uppercase" }}
-                          render={() => reportData.serology.vdrl}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            VDRL
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10, textTransform: "uppercase" }}
+                            render={() => reportData.serology.vdrl}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => ``}
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => ""}
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                  )}
+                  {reportData.serology.hcv && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          HCV
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10, textTransform: "uppercase" }}
-                          render={() => reportData.serology.hcv}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text style={{ fontSize: 10 }} render={() => ``}></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            HCV
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10, textTransform: "uppercase" }}
+                            render={() => reportData.serology.hcv}
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => ``}
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => ""}
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
+                  )}
                 </View>
               </>
             )}
