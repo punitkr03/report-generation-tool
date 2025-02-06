@@ -1292,8 +1292,8 @@ export default function TestSelection() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
-                      <SelectItem value="positive">FOUND</SelectItem>
-                      <SelectItem value="negative">NOT FOUND</SelectItem>
+                      <SelectItem value="found">FOUND</SelectItem>
+                      <SelectItem value="not found">NOT FOUND</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>
@@ -2209,7 +2209,7 @@ export default function TestSelection() {
                   <SelectContent>
                     <SelectGroup>
                       <SelectItem value="found">FOUND</SelectItem>
-                      <SelectItem value="not_found">NOT FOUND</SelectItem>
+                      <SelectItem value="not found">NOT FOUND</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>
@@ -2232,7 +2232,7 @@ export default function TestSelection() {
                   <SelectContent>
                     <SelectGroup>
                       <SelectItem value="found">FOUND</SelectItem>
-                      <SelectItem value="not_found">NOT FOUND</SelectItem>
+                      <SelectItem value="not found">NOT FOUND</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>
