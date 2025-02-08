@@ -8,12 +8,18 @@ import {
   Text,
   View,
 } from "@react-pdf/renderer";
+import { format } from "date-fns";
 
 export default function Report() {
   const data = JSON.parse(localStorage.getItem("data") as string);
   const metadata = JSON.parse(localStorage.getItem("metadata") as string);
   const selectedTests = data.selectedTestTypes;
   const reportData = data.reportData;
+  const collectionDateArr = metadata.collectionDate.split("/");
+  const reportingDateArr = metadata.reportingDate.split("/");
+
+  console.log(collectionDateArr);
+  console.log(reportingDateArr);
 
   Font.register({
     family: "Cambria",
@@ -197,7 +203,16 @@ export default function Report() {
                     fontSize: 10,
                     paddingLeft: 140,
                   }}
-                  render={() => `Collection Date :- ${metadata.collectionDate}`}
+                  render={() =>
+                    `Collection Date :- ${format(
+                      new Date(
+                        collectionDateArr[2],
+                        collectionDateArr[1] - 1,
+                        collectionDateArr[0]
+                      ),
+                      "d MMM, yyyy"
+                    )}`
+                  }
                 ></Text>
               </View>
             </View>
@@ -221,7 +236,16 @@ export default function Report() {
                     fontSize: 10,
                     paddingLeft: 140,
                   }}
-                  render={() => `Reporting Date :- ${metadata.reportingDate}`}
+                  render={() =>
+                    `Reporting Date :- ${format(
+                      new Date(
+                        reportingDateArr[2],
+                        reportingDateArr[1] - 1,
+                        reportingDateArr[0]
+                      ),
+                      "d MMM, yyyy"
+                    )}`
+                  }
                 ></Text>
               </View>
             </View>
@@ -230,14 +254,14 @@ export default function Report() {
                 style={{
                   width: "50%",
                   padding: 2,
-                  fontWeight: 600,
+                  // fontWeight: 600,
                 }}
               >
-                <Text
-                  style={{ fontSize: 10 }}
-                  render={() => `Referral             :- ${metadata.referral}`}
-                >
-                  Referral :- Dr. M O
+                <Text style={{ fontSize: 10 }}>
+                  Referral {"            "}:-{" "}
+                  <Text style={{ fontWeight: "bold" }}>
+                    {metadata.referral}
+                  </Text>
                 </Text>
               </View>
               <View style={{ width: "50%", padding: 2 }}>
