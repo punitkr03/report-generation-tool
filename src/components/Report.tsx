@@ -230,6 +230,7 @@ export default function Report() {
                 style={{
                   width: "50%",
                   padding: 2,
+                  fontWeight: 600,
                 }}
               >
                 <Text
