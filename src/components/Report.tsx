@@ -18,9 +18,6 @@ export default function Report() {
   const collectionDateArr = metadata.collectionDate.split("/");
   const reportingDateArr = metadata.reportingDate.split("/");
 
-  console.log(collectionDateArr);
-  console.log(reportingDateArr);
-
   Font.register({
     family: "Cambria",
     fonts: [
@@ -119,7 +116,7 @@ export default function Report() {
     agglutination_seen_1_80: "Agglutination seen 1:80",
     agglutination_seen_1_40: "Agglutination seen 1:40",
   };
-  console.log(metadata.patientTitle);
+
   return (
     <PDFViewer width="100%" height="800px">
       <Document>
@@ -1731,6 +1728,7 @@ export default function Report() {
                     </View>
                   )}
                 </View>
+
                 {reportData.cbc.differential_count && (
                   <View
                     style={{
@@ -3084,6 +3082,224 @@ export default function Report() {
                         style={{ fontSize: 10 }}
                         render={() => referenceValues.creatinine_serum.unit}
                       ></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("dengue") &&
+            reportData["dengue"] !== undefined && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        RAPID CARD FOR DENGUE
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 1,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        DENGUE (NS1)
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "22%",
+                        padding: 2,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                        render={() =>
+                          reportData.dengue.dengue_ns1 === "positive"
+                            ? "Reactive"
+                            : "Non reactive"
+                        }
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 2,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 2 }}>
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 1,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        DENGUE (IgG)
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "22%",
+                        padding: 2,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                        render={() =>
+                          reportData.dengue.dengue_igg === "positive"
+                            ? "Reactive"
+                            : "Non reactive"
+                        }
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 2,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 2 }}>
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 1,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        DENGUE (IgM)
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "22%",
+                        padding: 2,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                        render={() =>
+                          reportData.dengue.dengue_igm === "positive"
+                            ? "Reactive"
+                            : "Non reactive"
+                        }
+                      ></Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 2,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 2 }}>
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
                     </View>
                   </View>
                 </View>
@@ -9224,6 +9440,158 @@ export default function Report() {
                   ))}
                 </View>
               </>
+            )}
+
+          {selectedTests &&
+            selectedTests.includes("urine_culture_no_growth") && (
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  borderBottom: "1px solid black",
+                }}
+              >
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        URINE CULTURE & SENSITIVITY
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 1,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Specimen :-
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "22%",
+                        padding: 2,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        URINE C/S
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 2,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 2 }}>
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    width: "97%",
+                  }}
+                >
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: "35%",
+                        paddingTop: 1,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Culture :-
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "22%",
+                        padding: 2,
+                        textAlign: "left",
+                        marginRight: 10,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        Urine is sterile after 48 hrs. of incubation at 37°C.
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        width: "35%",
+                        padding: 2,
+                        textAlign: "left",
+                      }}
+                    >
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                    <View style={{ width: "15%", padding: 2 }}>
+                      <Text style={{ fontSize: 10 }} render={() => ""}></Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
             )}
 
           {selectedTests &&

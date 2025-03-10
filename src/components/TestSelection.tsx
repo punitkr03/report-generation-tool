@@ -727,6 +727,88 @@ export default function TestSelection() {
           </div>
         </>
       )}
+
+      {selectedTestTypes.includes("dengue") && (
+        <>
+          <div className="mx-4 mt-5 flex flex-wrap border-b-2">
+            <div>
+              <h1 className="text-xl font-semibold">Rapid Card For Dengue</h1>
+              <div className="grid grid-cols-6 items-center gap-2 my-2">
+                <p className="my-auto pr-4">DENGUE (NS1)</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      dengue: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.dengue,
+                        dengue_ns1: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="positive">Reactive</SelectItem>
+                      <SelectItem value="negative">Non Reactive</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <p className="my-auto pr-4">DENGUE (IgG)</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      dengue: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.dengue,
+                        dengue_igg: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="positive">Reactive</SelectItem>
+                      <SelectItem value="negative">Non Reactive</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <p className="my-auto pr-4">DENGUE (IgM)</p>
+                <Select
+                  onValueChange={(value) => {
+                    setReportData({
+                      ...reportData,
+                      dengue: {
+                        //@ts-expect-error - Sab changa-si
+                        ...reportData.dengue,
+                        dengue_igm: value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select result" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="positive">Reactive</SelectItem>
+                      <SelectItem value="negative">Non Reactive</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
       {selectedTestTypes.includes("differential_count") && (
         <>
           <div className="mx-4 mt-5 flex flex-wrap border-b-2">
@@ -2349,6 +2431,43 @@ export default function TestSelection() {
           </div>
         </>
       )}
+
+      {selectedTestTypes.includes("urine_culture_no_growth") && (
+        <>
+          <div className="mx-4 mt-5 flex flex-wrap border-b-2">
+            <div>
+              <h1 className="text-xl font-semibold">
+                Urine culture & sensitivity
+              </h1>
+              <div className="w-full flex items-center gap-8 my-2">
+                <div className="flex gap-2">
+                  <p className="my-auto">Specimen</p>
+                  <Input
+                    type="text"
+                    placeholder="Enter value"
+                    className="w-40"
+                    value={"URINE C/S"}
+                    disabled
+                  />
+                </div>
+                <div className="flex gap-2">
+                  <p className="my-auto pr-4">Culture</p>
+                  <Input
+                    type="text"
+                    placeholder="Enter value"
+                    className="w-96"
+                    value={
+                      "Urine is sterile after 48 hrs. of incubation at 37°C."
+                    }
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
       {selectedTestTypes.includes("urine_cs") && (
         <>
           <div className="mx-4 mt-5 flex flex-wrap border-b-2">
@@ -2383,8 +2502,8 @@ export default function TestSelection() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
-                      <SelectItem value="present">PRESENT</SelectItem>
-                      <SelectItem value="absent">ABSENT</SelectItem>
+                      <SelectItem value="positive">POSITIVE</SelectItem>
+                      <SelectItem value="negative">NEGATIVE</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>

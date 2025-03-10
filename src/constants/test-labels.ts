@@ -49,6 +49,10 @@ export const testLabels = [
     value: ReferenceValuesEnum.CREATININE_SERUM,
   },
   {
+    label: "Dengue",
+    value: ReferenceValuesEnum.DENGUE,
+  },
+  {
     label: "Differential Count",
     value: ReferenceValuesEnum.DIFFERENTIAL_COUNT,
   },
@@ -159,6 +163,10 @@ export const testLabels = [
   {
     label: "Urine Culture and Sensitivity",
     value: ReferenceValuesEnum.URINE_CS,
+  },
+  {
+    label: "Urine culture no growth",
+    value: ReferenceValuesEnum.URINE_CULTURE_NO_GROWTH,
   },
   {
     label: "Urine Routine Examination",
