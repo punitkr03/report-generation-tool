@@ -9988,7 +9988,7 @@ export default function Report() {
                         }}
                       >
                         <Text
-                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          style={{ fontSize: 10 }}
                           render={() => reportData.urine_re.casts}
                         ></Text>
                       </View>
@@ -10044,7 +10044,7 @@ export default function Report() {
                         }}
                       >
                         <Text
-                          style={{ fontSize: 10, textTransform: "uppercase" }}
+                          style={{ fontSize: 10 }}
                           render={() => reportData.urine_re.crystals}
                         ></Text>
                       </View>

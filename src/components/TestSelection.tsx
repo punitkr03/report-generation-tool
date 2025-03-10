@@ -1437,7 +1437,7 @@ export default function TestSelection() {
                 </Popover>
                 <p className="my-auto pr-4">Erythema</p>
                 <Input
-                  type="number"
+                  type="text"
                   placeholder="Enter value"
                   className="w-40"
                   onChange={(e) => {
@@ -1453,7 +1453,7 @@ export default function TestSelection() {
                 />
                 <p className="my-auto pr-4">Induration</p>
                 <Input
-                  type="number"
+                  type="text"
                   placeholder="Enter value"
                   className="w-40"
                   onChange={(e) => {
@@ -1470,7 +1470,7 @@ export default function TestSelection() {
                 <p className="my-auto pr-4">P.P.D Injected</p>
                 <div className="flex items-center gap-2 col-span-3">
                   <Input
-                    type="number"
+                    type="text"
                     placeholder="Enter value"
                     className="w-40"
                     onChange={(e) => {
@@ -3007,51 +3007,37 @@ export default function TestSelection() {
                   }}
                 />
                 <p className="my-auto pr-4">Casts</p>
-                <Select
-                  onValueChange={(value) => {
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
                     setReportData({
                       ...reportData,
                       urine_re: {
                         //@ts-expect-error - Sab changa-si
                         ...reportData.urine_re,
-                        casts: value,
+                        casts: e.target.value,
                       },
                     });
                   }}
-                >
-                  <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Select result" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectItem value="present">PRESENT</SelectItem>
-                      <SelectItem value="absent">ABSENT</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
+                />
                 <p className="my-auto pr-4">Crystals</p>
-                <Select
-                  onValueChange={(value) => {
+                <Input
+                  type="text"
+                  placeholder="Enter value"
+                  className="w-40"
+                  onChange={(e) => {
                     setReportData({
                       ...reportData,
                       urine_re: {
                         //@ts-expect-error - Sab changa-si
                         ...reportData.urine_re,
-                        crystals: value,
+                        crystals: e.target.value,
                       },
                     });
                   }}
-                >
-                  <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Select result" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectItem value="present">PRESENT</SelectItem>
-                      <SelectItem value="absent">ABSENT</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
+                />
                 <p className="my-auto pr-4">Others</p>
                 <Input
                   type="text"
