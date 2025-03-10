@@ -58,7 +58,7 @@ export default function TestSelection() {
               </span>
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56 max-h-80 overflow-y-auto">
+          <DropdownMenuContent className="w-80 max-h-80 overflow-y-auto">
             <DropdownMenuLabel>Test Types</DropdownMenuLabel>
             <DropdownMenuSeparator />
             {testLabels.map((testType, index) => (
@@ -1231,38 +1231,6 @@ export default function TestSelection() {
                         //@ts-expect-error - Sab changa-si
                         ...reportData.lft,
                         albumin: e.target.value,
-                      },
-                    });
-                  }}
-                />
-                <p className="my-auto pr-4">Globulin</p>
-                <Input
-                  type="number"
-                  placeholder="Enter value"
-                  className="w-40"
-                  onChange={(e) => {
-                    setReportData({
-                      ...reportData,
-                      lft: {
-                        //@ts-expect-error - Sab changa-si
-                        ...reportData.lft,
-                        globulin: e.target.value,
-                      },
-                    });
-                  }}
-                />
-                <p className="my-auto pr-4">A/G Ratio</p>
-                <Input
-                  type="number"
-                  placeholder="Enter value"
-                  className="w-40"
-                  onChange={(e) => {
-                    setReportData({
-                      ...reportData,
-                      lft: {
-                        //@ts-expect-error - Sab changa-si
-                        ...reportData.lft,
-                        a_g_ratio: e.target.value,
                       },
                     });
                   }}

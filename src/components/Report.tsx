@@ -5090,68 +5090,74 @@ export default function Report() {
                     </View>
                   </View>
                 )}
-                {reportData.lft.globulin && (
-                  <View
-                    style={{
-                      width: "97%",
-                    }}
-                  >
+                {reportData.lft.total_protein &&
+                  reportData.lft.total_protein && (
                     <View
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        width: "97%",
                       }}
                     >
                       <View
                         style={{
-                          width: "35%",
-                          paddingTop: 1,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <Text
+                        <View
                           style={{
-                            fontSize: 10,
+                            width: "35%",
+                            paddingTop: 1,
                           }}
                         >
-                          Globulin
-                        </Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "22%",
-                          padding: 2,
-                          textAlign: "left",
-                          marginRight: 10,
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => reportData.lft.globulin}
-                        ></Text>
-                      </View>
-                      <View
-                        style={{
-                          width: "35%",
-                          padding: 2,
-                          textAlign: "left",
-                        }}
-                      >
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => referenceValues.lft.globulin.value}
-                        ></Text>
-                      </View>
-                      <View style={{ width: "15%", padding: 2 }}>
-                        <Text
-                          style={{ fontSize: 10 }}
-                          render={() => referenceValues.lft.globulin.unit}
-                        ></Text>
+                          <Text
+                            style={{
+                              fontSize: 10,
+                            }}
+                          >
+                            Globulin
+                          </Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "22%",
+                            padding: 2,
+                            textAlign: "left",
+                            marginRight: 10,
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() =>
+                              (
+                                reportData.lft.total_protein -
+                                reportData.lft.albumin
+                              ).toFixed(1)
+                            }
+                          ></Text>
+                        </View>
+                        <View
+                          style={{
+                            width: "35%",
+                            padding: 2,
+                            textAlign: "left",
+                          }}
+                        >
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => referenceValues.lft.globulin.value}
+                          ></Text>
+                        </View>
+                        <View style={{ width: "15%", padding: 2 }}>
+                          <Text
+                            style={{ fontSize: 10 }}
+                            render={() => referenceValues.lft.globulin.unit}
+                          ></Text>
+                        </View>
                       </View>
                     </View>
-                  </View>
-                )}
-                {reportData.lft.a_g_ratio && (
+                  )}
+                {reportData.lft.total_protein && reportData.lft.albumin && (
                   <View
                     style={{
                       width: "97%",
@@ -5188,7 +5194,13 @@ export default function Report() {
                       >
                         <Text
                           style={{ fontSize: 10 }}
-                          render={() => reportData.lft.a_g_ratio}
+                          render={() =>
+                            (
+                              reportData.lft.albumin /
+                              (reportData.lft.total_protein -
+                                reportData.lft.albumin)
+                            ).toFixed(1)
+                          }
                         ></Text>
                       </View>
                       <View
