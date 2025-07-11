@@ -7421,12 +7421,13 @@ export default function Report() {
                         <View
                           style={{
                             width: "35%",
-                            paddingTop: 1,
+                            paddingTop: 2,
                           }}
                         >
                           <Text
                             style={{
                               fontSize: 10,
+                              fontWeight: 600,
                             }}
                           >
                             HIV (1&2)
@@ -7441,7 +7442,11 @@ export default function Report() {
                           }}
                         >
                           <Text
-                            style={{ fontSize: 10, textTransform: "uppercase" }}
+                            style={{
+                              fontSize: 10,
+                              textTransform: "uppercase",
+                              fontWeight: 600,
+                            }}
                             render={() => reportData.serology.hiv}
                           ></Text>
                         </View>
@@ -7464,6 +7469,30 @@ export default function Report() {
                           ></Text>
                         </View>
                       </View>
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        1. A negative result implies that no Anti HIV-1 & HIV-2
+                        antibodies have been detected in the sample by this
+                        method. This means that either the patient has not been
+                        exposed to HIV-1 or HIV-2 infection or the sample has
+                        been tested during the “WINDOW PHASE”{" "}
+                        {`(before the development of detectable levels of antibodies)`}
+                        .
+                      </Text>
+                      <Text
+                        style={{
+                          fontSize: 10,
+                        }}
+                      >
+                        2. A positive result suggests the possibilities of HIV-I
+                        and/or HIV-II infection. However these results must be
+                        verified by a confirmatory test{" "}
+                        {`(IFA / WESTERN BLOT I-II)`} before pronouncing the
+                        patient positive for HIV-1 and/or HIV-2 infection.
+                      </Text>
                     </View>
                   )}
                   {reportData.serology.hbsag && (
@@ -7482,12 +7511,13 @@ export default function Report() {
                         <View
                           style={{
                             width: "35%",
-                            paddingTop: 1,
+                            paddingTop: 4,
                           }}
                         >
                           <Text
                             style={{
                               fontSize: 10,
+                              fontWeight: 600,
                             }}
                           >
                             HbsAg
@@ -7502,7 +7532,11 @@ export default function Report() {
                           }}
                         >
                           <Text
-                            style={{ fontSize: 10, textTransform: "uppercase" }}
+                            style={{
+                              fontSize: 10,
+                              textTransform: "uppercase",
+                              fontWeight: 600,
+                            }}
                             render={() => reportData.serology.hbsag}
                           ></Text>
                         </View>
@@ -7525,9 +7559,69 @@ export default function Report() {
                           ></Text>
                         </View>
                       </View>
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          1. Presence of Hepatitis B antigen indicates reactive
+                          result which monitors HBAg levels during the disease
+                          but cannot predict the stages of disease.
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          2. Absence of Hepatitis B antigen indicates non
+                          reactive result.
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          3. Rapid card tests are screening test, false positive
+                          and false negative results may occur due to various
+                          factors which may influence test result.
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          4. HbsAg is the first serologic marker appearing in
+                          the serum 6-16 weeks following hepatitis B viral
+                          infection. In typical HBV infection, HBsAg will be
+                          detected 2-4 weeks before the liver enzyme levels
+                          {` (ALT)`} become abnormal and 3-5 weeks before
+                          patient develops jaundice.
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          5. In acute cases HbsAg usually disappears 1-2 months
+                          after the onset of symptoms. Persistence of HbsAg for
+                          more than 6 months indicates development of either a
+                          chronic carrier state or chronic liver disease.
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          6. The presence of HbsAg is frequently associated with
+                          infectivity. HbsAg when accompanied by Hepatitis Be
+                          antigen and/or hepatitis B viral DNA almost always
+                          indicates infectivity.
+                        </Text>
+                      </View>
                     </View>
                   )}
-                  {reportData.serology.vdrl && (
+                  {reportData.serology.hcv && (
                     <View
                       style={{
                         width: "97%",
@@ -7543,15 +7637,16 @@ export default function Report() {
                         <View
                           style={{
                             width: "35%",
-                            paddingTop: 1,
+                            paddingTop: 4,
                           }}
                         >
                           <Text
                             style={{
                               fontSize: 10,
+                              fontWeight: 600,
                             }}
                           >
-                            VDRL
+                            HCV
                           </Text>
                         </View>
                         <View
@@ -7563,8 +7658,12 @@ export default function Report() {
                           }}
                         >
                           <Text
-                            style={{ fontSize: 10, textTransform: "uppercase" }}
-                            render={() => reportData.serology.vdrl}
+                            style={{
+                              fontSize: 10,
+                              textTransform: "uppercase",
+                              fontWeight: 600,
+                            }}
+                            render={() => reportData.serology.hcv}
                           ></Text>
                         </View>
                         <View
@@ -7586,12 +7685,61 @@ export default function Report() {
                           ></Text>
                         </View>
                       </View>
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          1. Reactive test result indicates presence of
+                          Hepatitis C virus infection. It cannot differentiate
+                          between the stages of Hepatitis C viral infection nor
+                          used to monitor the efficacy of treatment.
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          2. Non-Reactive test result indicates Hepatitis C
+                          virus infection is unlikely.
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          3. False positive results may be observed in patients
+                          receiving mouse monoclonal antibodies, on heparin
+                          therapy, on biotin supplements for diagnosis or
+                          therapy or presence of heterophilic antibodies in
+                          serum.
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          4. False negative reaction may be due to processing of
+                          sample collected early in the course of disease,
+                          Prozone phenomenon, Immunosuppression &
+                          Immuno-incompetence.
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 10,
+                          }}
+                        >
+                          5. Test conducted on serum.
+                        </Text>
+                      </View>
                     </View>
                   )}
-                  {reportData.serology.hcv && (
+                  {reportData.serology.vdrl && (
                     <View
                       style={{
                         width: "97%",
+                        paddingBottom: 10,
                       }}
                     >
                       <View
@@ -7604,15 +7752,16 @@ export default function Report() {
                         <View
                           style={{
                             width: "35%",
-                            paddingTop: 1,
+                            paddingTop: 4,
                           }}
                         >
                           <Text
                             style={{
                               fontSize: 10,
+                              fontWeight: 600,
                             }}
                           >
-                            HCV
+                            VDRL
                           </Text>
                         </View>
                         <View
@@ -7624,8 +7773,12 @@ export default function Report() {
                           }}
                         >
                           <Text
-                            style={{ fontSize: 10, textTransform: "uppercase" }}
-                            render={() => reportData.serology.hcv}
+                            style={{
+                              fontSize: 10,
+                              textTransform: "uppercase",
+                              fontWeight: 600,
+                            }}
+                            render={() => reportData.serology.vdrl}
                           ></Text>
                         </View>
                         <View
